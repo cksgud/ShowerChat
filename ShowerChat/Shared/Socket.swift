@@ -1,3 +1,12 @@
+//
+//  Communication.swift
+//  ClientApp
+//
+//  Created by Tristan Ratz on 22.09.19.
+//  Copyright © 2019 Tristan Ratz. All rights reserved.
+//  Modified by 김찬형 on 2021/09/09.
+//
+
 import Foundation
 
 class Socket: NSObject, StreamDelegate {
@@ -16,8 +25,8 @@ class Socket: NSObject, StreamDelegate {
 
     private var buffer: [Data] = []
 
-    var dataHandler: ((Data, String) -> Void)?
-    var stringHandler: ((String, String) -> Void)?
+    var dataHandler: ((Data, String) -> Void)? // First argument data, second IP
+    var stringHandler: ((String, String) -> Void)? // First argument data, second IP
 
     var connectionCallback: ((Bool) -> Void)?
 
@@ -80,7 +89,7 @@ class Socket: NSObject, StreamDelegate {
         }
         
         print("Sending message...")
-        _ = data.withUnsafeBytes {
+        data.withUnsafeBytes {
             guard
                 let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self)
                 else {
@@ -93,7 +102,10 @@ class Socket: NSObject, StreamDelegate {
         return true
     }
 
-    func sendText(text: String) -> Bool {
+    func sendText(text: String) {
+        #if PROTOCOL_NOJSON
+        _ = self.send(data: (text).data(using: textEncoding)!)
+        #else
         let stringToServer = SendToServer(text: text)
 
         let encoder = JSONEncoder()
@@ -102,7 +114,8 @@ class Socket: NSObject, StreamDelegate {
         let dataToServer = try! encoder.encode(stringToServer)
         let jsonToServer = String(data: dataToServer, encoding: .utf8)!
         
-        return self.send(data: (jsonToServer).data(using: textEncoding)!)
+        _ = self.send(data: (jsonToServer).data(using: textEncoding)!)
+        #endif
     }
     
     private func readAvailableBytes(stream: InputStream) {
@@ -115,31 +128,100 @@ class Socket: NSObject, StreamDelegate {
           break
         }
 
-        if let (data, string) =
+        if var (data, string) =
             processedMessageString(buffer: buffer, length: numberOfBytesRead) {
-            
-            SharedRepo.sharedVariables.response_type.removeAll()
-            SharedRepo.sharedVariables.chatbot.removeAll()
-            SharedRepo.sharedVariables.user_response.removeAll()
-            
-            let decoder = JSONDecoder()
-            guard let serverResponse = try? decoder.decode(ServerResponse.self, from: string.data(using: .utf8)!) else {
-                print("JSON decoding error!")
-                return
-            }
-            
-            if !serverResponse.type.isEmpty {
-                SharedRepo.sharedVariables.response_type = serverResponse.type
-            }
-            if !serverResponse.chatbot.isEmpty {
-                SharedRepo.sharedVariables.chatbot = serverResponse.chatbot
-            }
-            if !serverResponse.user_response.isEmpty {
-                for response in serverResponse.user_response {
-                    SharedRepo.sharedVariables.user_response.append(response)
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                #if PROTOCOL_NEWJSON
+//                string = """
+//                {
+//                "chatbot": ["오늘은 기분이 안좋군요", "기분을 한결 좋게 해줄 음악이 있어요", "한번 들어볼래요??"],
+//                "buttons": [
+//                    {"type": "button", "text": "다음에 들을래요2", "title": "Better together", "artist":"Pate Joans", "src": "src/music/better_together.mp3"}
+//                    ]
+//                }
+//                """
+                SharedRepo.sharedVariables.response_type.removeAll()
+                SharedRepo.sharedVariables.chatbot.removeAll()
+                SharedRepo.sharedVariables.user_response.removeAll()
+                
+                let decoder = JSONDecoder()
+                guard let serverResponse = try? decoder.decode(ServerResponse.self, from: string.data(using: .utf8)!) else {
+                    print("JSON decoding error!")
+                    return
                 }
-            }
-            
+                
+                if !serverResponse.chatbot.isEmpty {
+                    for chatbot in serverResponse.chatbot {
+                        SharedRepo.sharedVariables.chatbot.append(chatbot)
+                    }
+                }
+                if !serverResponse.buttons.isEmpty {
+                    for buttons in serverResponse.buttons {
+                        if buttons.type.contains("button") {
+                            SharedRepo.sharedVariables.user_response.append(buttons.text!)
+                            SharedRepo.sharedVariables.response_type.append("button")
+                        } else if buttons.type.contains("music") {
+                            SharedRepo.sharedVariables.user_response.append(buttons.title! + "," + buttons.artist!)
+                            SharedRepo.sharedVariables.response_type.append("music")
+                        } else if buttons.type.contains("meditation") {
+                            SharedRepo.sharedVariables.user_response.append(buttons.text!)
+                            SharedRepo.sharedVariables.response_type.append("meditation")
+                        } else if buttons.type.contains("diary") {
+                            SharedRepo.sharedVariables.user_response.append(buttons.text!)
+                            SharedRepo.sharedVariables.response_type.append("diary")
+                        }
+                    }
+                }
+                
+                #elseif PROTOCOL_JSON
+                // test data
+                string = """
+                {
+                    "type": "button",
+                    "chatbot": "안녕하세요? 상담사입니다.",
+                    "user_response": [
+                        "네 안녕하세요!",
+                        "반갑습니다"
+                    ]
+                }
+                """
+                SharedRepo.sharedVariables.response_type.removeAll()
+                SharedRepo.sharedVariables.chatbot.removeAll()
+                SharedRepo.sharedVariables.user_response.removeAll()
+                
+                let decoder = JSONDecoder()
+                guard let serverResponse = try? decoder.decode(ServerResponse.self, from: string.data(using: .utf8)!) else {
+                    print("JSON decoding error!")
+                    return
+                }
+                
+                if !serverResponse.type.isEmpty {
+                    SharedRepo.sharedVariables.response_type = serverResponse.type
+                }
+                if !serverResponse.chatbot.isEmpty {
+                    SharedRepo.sharedVariables.chatbot = serverResponse.chatbot
+                }
+                if !serverResponse.user_response.isEmpty {
+                    for response in serverResponse.user_response {
+                        SharedRepo.sharedVariables.user_response.append(response)
+                    }
+                }
+                
+                #elseif PROTOCOL_NOJSON
+                let serverResponse = string
+                let responseParts = serverResponse.split(separator: ":")
+                SharedRepo.sharedVariables.chatbot.removeAll()
+                SharedRepo.sharedVariables.user_response.removeAll()
+                
+                if !responseParts.isEmpty {
+                    SharedRepo.sharedVariables.chatbot = String(responseParts[0])
+                    for i in 1 ..< responseParts.count {
+                        SharedRepo.sharedVariables.user_response.append(String(responseParts[i]))
+                    }
+                }
+                #endif
+            })
             
             if self.dataHandler != nil {
                 self.dataHandler!(data, self.ipAddress)
@@ -202,7 +284,7 @@ class Socket: NSObject, StreamDelegate {
         case .hasSpaceAvailable:
             print("Stream has space available")
             if !buffer.isEmpty {
-                send(data: self.buffer.removeFirst())
+                _ = send(data: self.buffer.removeFirst())
             }
         default:
             print("some other event...")
@@ -210,11 +292,25 @@ class Socket: NSObject, StreamDelegate {
     }
 }
 
+#if PROTOCOL_JSON
 struct ServerResponse: Codable {
     var type: String
     var chatbot: String
     var user_response: [String]
 }
+#elseif PROTOCOL_NEWJSON
+struct ServerResponse: Codable {
+    var chatbot: [String]
+    var buttons: [Buttons]
+}
+struct Buttons: Codable {
+    var type: String
+    var text: String?
+    var link: String?
+    var title: String?
+    var artist: String?
+}
+#endif
 
 struct SendToServer: Codable {
     var text: String

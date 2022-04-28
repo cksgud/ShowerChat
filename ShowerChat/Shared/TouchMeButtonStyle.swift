@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct TouchMeButtonStyle: ButtonStyle {
-    @State private var offset: Double = 0
-    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .foregroundColor(configuration.isPressed ? .black : .white)
@@ -22,5 +20,6 @@ struct TouchMeButtonStyle: ButtonStyle {
             )
             .multilineTextAlignment(.center)
             .animation(.easeInOut)
+            .transition(.move(edge: .bottom))
     }
 }

@@ -1,6 +1,16 @@
+//
+//  Connection.swift
+//  ClientApp
+//
+//  Created by Tristan Ratz on 03.10.19.
+//  Copyright © 2019 Tristan Ratz. All rights reserved.
+//  Modified by 김찬형 on 2021/09/09.
+//
+
 import SwiftUI
 import Combine
 
+// Socket.swift 기반으로 실제 활용 가능한 API
 class Connection: ObservableObject {
 
     @Published var askForName: Bool = false
@@ -51,6 +61,23 @@ class Connection: ObservableObject {
             self.failedToConnect = true
         }
     }
+
+//    func login(name: String) {
+//        self.name = name
+//        socket!.stringHandler = loginCallback
+//        socket!.sendText(text: name)
+//    }
+//
+//    func loginCallback(reply: String, ip: String) {
+//        print("Logincallback: ", reply)
+//        if reply == "server:msg:Welcome, \(self.name)!" {
+//            self.askForName = false
+////            controller.connected()
+//        } else if reply == "server:inf:name" {
+//            self.askForName = true
+//            self.userNameRejected = true
+//        }
+//    }
 
     // 메시지 전송
     func send(message: String) {

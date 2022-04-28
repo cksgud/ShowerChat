@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ChatBotAnswerTextView: View {
-    let chatBotAnswer: String
-    
+    @State var opacityOnAppear : Double = 0
+    let chatBotAnswer: [String]
     var body: some View {
-        Text(chatBotAnswer)
-        .foregroundColor(.white)
-        .font(.title)
-        .multilineTextAlignment(.center)
+        VStack {
+            ForEach(chatBotAnswer, id:\.self ) { chatbotAnswerText in
+                ChatBotAnswerText(chatBotAnswer: chatbotAnswerText)
+            }
+        }
     }
 }

@@ -1,0 +1,6 @@
+framework module Pods_ShowerChat {
+  umbrella header "Pods-ShowerChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

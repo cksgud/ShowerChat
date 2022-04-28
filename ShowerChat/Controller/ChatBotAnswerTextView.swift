@@ -16,5 +16,6 @@ struct ChatBotAnswerTextView: View {
                 ChatBotAnswerText(chatBotAnswer: chatbotAnswerText)
             }
         }
+        .lineSpacing(11)
     }
 }

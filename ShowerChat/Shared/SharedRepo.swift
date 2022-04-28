@@ -8,7 +8,7 @@
 import AVKit
 
 class SharedRepo : ObservableObject {
-    @Published var isPlayOn: Bool = true
+    @Published var mentalVideoPlayer = QueuePlayerUIView(frame: .zero)
     @Published var isShowOn: Bool = true
     @Published var onAppearNumber : Double = 1.0
     @Published var usrRespBtnHorizontal: Bool = false
@@ -19,8 +19,10 @@ class SharedRepo : ObservableObject {
     @Published var audioPlayer: AVAudioPlayer!
     @Published var musicPath = Bundle.main.path(forResource: "Bluebird_BumyGoldson", ofType: "mp3")
     @Published var musicPlayerOn = false
+    @Published var onelineDiaryOn = false
     @Published var diaryData = [String]()
     @Published var user_response_picked : String = ""
+    @Published var main_mission_selected : String = ""
     
     #if PROTOCOL_LOCAL
     @Published var chatbot_answer_count: Int = 0

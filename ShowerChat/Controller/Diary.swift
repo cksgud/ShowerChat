@@ -11,6 +11,7 @@ struct Diary: View {
     @EnvironmentObject private var clientSocket: Connection
     @State private var diaryContents: String = ""
     @State var alertPresent = 0
+    @Binding var goNext: Bool
     var body: some View {
         if alertPresent == 0 {
             HStack {
@@ -18,7 +19,7 @@ struct Diary: View {
                     HStack {
                         Text("한줄일기")
                             .foregroundColor(.black).opacity(0.5)
-                            .font(.subheadline)
+                            .font(Font.custom("AppleSDGothicNeo-Medium", size: 12))
                             .padding(.top, 10)
                             .padding(.leading, 10)
     //                        .frame(width: 84, height: 15)
@@ -32,8 +33,13 @@ struct Diary: View {
                             .foregroundColor(.black)
                         Spacer()
                         Text("취소").foregroundColor(.red)
+                            .font(Font.custom("AppleSDGothicNeo-Medium", size: 16))
                             .padding(.trailing, 10)
                             .onTapGesture {
+                                goNext.toggle()
+                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                                    goNext.toggle()
+                                }
                                 clientSocket.send(message: "일기작성취소")
                                 alertPresent = 1
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
@@ -51,14 +57,19 @@ struct Diary: View {
                             }
                         
                         Image(systemName: "arrow.right.circle")
+                            .resizable()
+                            .frame(width: 27, height: 27)
                             .padding(.trailing, 20)
                             .foregroundColor(.black)
-                            .font(.system(size: 27))
                             .onTapGesture {
-                                if !diaryContents.isEmpty {
-                                    clientSocket.send(message: diaryContents)
+                                goNext.toggle()
+                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                                    goNext.toggle()
                                 }
-                                clientSocket.send(message: "일기작성완료")
+                                if !diaryContents.isEmpty {
+//                                    clientSocket.send(message: diaryContents)
+                                    SharedRepo.sharedVariables.diaryData.append(diaryContents)
+                                }
                                 alertPresent = 2
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                                     withAnimation(.easeIn(duration: 1.0)) {
@@ -66,6 +77,8 @@ struct Diary: View {
                                         #if PROTOCOL_LOCAL
                                         SharedRepo.sharedVariables.user_response_data.removeAll()
                                         #else
+                                        SharedRepo.sharedVariables.onelineDiaryOn.toggle()
+                                        clientSocket.send(message: "일기작성완료")
                                         SharedRepo.sharedVariables.user_response.removeAll()
                                         #endif
                                         SharedRepo.sharedVariables.user_response_picked.removeAll()

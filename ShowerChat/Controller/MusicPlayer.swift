@@ -13,12 +13,16 @@ struct MusicPlayer: View {
     var musicPath = Bundle.main.path(forResource: "Bluebird_BumyGoldson", ofType: "mp3")
     var audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Bluebird_BumyGoldson", ofType: "mp3")!))
     @State var playFlag = false
+    @Binding var goNext: Bool
     
     var body: some View {
         HStack {
             VStack {
                 Text("Better Together").padding(.leading, 35)
+                    .font(Font.custom("AppleSDGothicNeo-Bold", size: 18))
                 Text("Pate Jonas")
+                    .font(Font.custom("AppleSDGothicNeo-Light", size: 14))
+                    .offset(x: -15)
             }
             Spacer()
             if playFlag {
@@ -36,6 +40,10 @@ struct MusicPlayer: View {
             }
             Image(systemName: "xmark").padding(.trailing, 20)
                 .onTapGesture {
+                    goNext.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                        goNext.toggle()
+                    }
                     SharedRepo.sharedVariables.response_type.removeAll()
                     #if PROTOCOL_LOCAL
                     SharedRepo.sharedVariables.user_response_data.removeAll()
@@ -51,9 +59,10 @@ struct MusicPlayer: View {
         .background(
             Rectangle()
                 .fill(Color.black.opacity(0.5))
-                .frame(width: .infinity, height: 80)
+                .frame(width: UIScreen.main.bounds.width, height: 80)
                 .edgesIgnoringSafeArea(.bottom)
         )
+        .foregroundColor(.white)
         .padding(.top, 30)
     }
 }

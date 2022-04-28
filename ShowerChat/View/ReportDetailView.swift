@@ -9,6 +9,6 @@ import SwiftUI
 
 struct ReportDetailView: View {
     var body: some View {
-        Text("Report Detail View")
+        MainView()
     }
 }

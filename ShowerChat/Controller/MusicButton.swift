@@ -17,13 +17,13 @@ struct MusicButton: View {
                 .resizable()
                 .frame(width: 73, height: 73)
                 .cornerRadius(17)
-                .offset(x: -10)
-                .scaleEffect(x: 1.15, y: 1.15, anchor: .center)
+                .offset(x: -15)
+//                .scaleEffect(x: 1.15, y: 1.15, anchor: .center)
             VStack {
                 Text(musicName)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(Font.custom("AppleSDGothicNeo-Bold", size: 18))
                 Text(artistName)
-                    .font(.system(size: 14))
+                    .font(Font.custom("AppleSDGothicNeo-Light", size: 14))
                     .offset(x: -32)
             }
             Spacer()

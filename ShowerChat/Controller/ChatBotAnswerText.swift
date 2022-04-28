@@ -13,7 +13,7 @@ struct ChatBotAnswerText: View {
     var body: some View {
         Text(chatBotAnswer)
         .foregroundColor(.white)
-            .font(Font.custom(!chatBotAnswer.contains("I") ? "AppleSDGothicNeo" : "Apple-Chancery", size: 20))
+        .font(Font.custom(!chatBotAnswer.contains("I") ? "AppleSDGothicNeo-SemiBold" : "Apple-Chancery", size: !chatBotAnswer.contains("I") ? 20 : 16))
         .multilineTextAlignment(.center)
         .opacity(opacityOnAppear)
         .onAppear() {
@@ -25,6 +25,6 @@ struct ChatBotAnswerText: View {
         }
         .animation(.easeIn)
         .transition(.move(edge: .bottom))
-        .padding(.bottom, 30)
+        .frame(width: 335)
     }
 }

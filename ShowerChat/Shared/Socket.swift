@@ -128,7 +128,7 @@ class Socket: NSObject, StreamDelegate {
           break
         }
 
-        if var (data, string) =
+        if let (data, string) =
             processedMessageString(buffer: buffer, length: numberOfBytesRead) {
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
@@ -141,6 +141,7 @@ class Socket: NSObject, StreamDelegate {
 //                    ]
 //                }
 //                """
+                print("Received Message : ", string)
                 SharedRepo.sharedVariables.response_type.removeAll()
                 SharedRepo.sharedVariables.chatbot.removeAll()
                 SharedRepo.sharedVariables.user_response.removeAll()
@@ -172,6 +173,12 @@ class Socket: NSObject, StreamDelegate {
                             SharedRepo.sharedVariables.response_type.append("diary")
                         }
                     }
+                }
+                
+                if serverResponse.buttons.count > 2 {
+                    SharedRepo.sharedVariables.usrRespBtnHorizontal = true
+                } else {
+                    SharedRepo.sharedVariables.usrRespBtnHorizontal = false
                 }
                 
                 #elseif PROTOCOL_JSON

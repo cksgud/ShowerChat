@@ -14,7 +14,7 @@ struct UserResponseData: Hashable {
 extension UserResponseData {
     static func all() -> [UserResponseData] {
         return [
-            UserResponseData(responses: ["👍🏻\n좋아요", "🖐🏻🤚🏻\n보통이에요", "👎🏻\n우울해요"]),
+            UserResponseData(responses: ["👍🏻\n\n좋아요", "🖐🏻🤚🏻\n\n보통이에요", "👎🏻\n\n우울해요"]),
             UserResponseData(responses: ["맞아요", "괜찮아요"]),
             UserResponseData(responses: ["▶ Better Together  Pate Jonas", "다음에 들을게요"]),
             UserResponseData(responses: ["조금은 나아진 것 같아요", "그저 그래요"]),

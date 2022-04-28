@@ -20,6 +20,7 @@ struct ProfileArea: View {
             Text(profileData.profileUserName)
                 .font(Font.custom("AppleSDGothicNeo", size: 22))
                 .padding(.leading, 12)
+                .foregroundColor(.white)
             Spacer()
             Image(systemName: "xmark")
                 .padding(.trailing, 24)

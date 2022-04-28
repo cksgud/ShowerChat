@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5678236E26E0EB3500706CDE /* ShowerChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5678236D26E0EB3500706CDE /* ShowerChatApp.swift */; };
+		5678237226E0EB3700706CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5678237126E0EB3700706CDE /* Assets.xcassets */; };
+		5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5678237426E0EB3700706CDE /* Preview Assets.xcassets */; };
+		5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5678238626E0EB8100706CDE /* ChatScreen.swift */; };
+		567823B326E1C94F00706CDE /* KoreaFlag.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 567823B126E1C94F00706CDE /* KoreaFlag.MP4 */; };
+		567823B426E1C94F00706CDE /* Effect1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 567823B226E1C94F00706CDE /* Effect1.gif */; };
+		56BBD26C26E4A9B500FB8AE6 /* PlayRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */; };
+		56EFF0EC26E24F6A00E643DD /* mentalCareVideo.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 56EFF0EB26E24F6A00E643DD /* mentalCareVideo.MP4 */; };
+		56EFF0F026E44D4B00E643DD /* UserResponseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */; };
+		56EFF0F326E44D9600E643DD /* UserResponseMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */; };
+		56EFF0F626E455C800E643DD /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F526E455C800E643DD /* CircleButton.swift */; };
+		56EFF0F926E456B100E643DD /* ChatBotAnswerMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */; };
+		56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5678236A26E0EB3500706CDE /* ShowerChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowerChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5678236D26E0EB3500706CDE /* ShowerChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerChatApp.swift; sourceTree = "<group>"; };
+		5678237126E0EB3700706CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5678237426E0EB3700706CDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5678237626E0EB3700706CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5678238626E0EB8100706CDE /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		567823B126E1C94F00706CDE /* KoreaFlag.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KoreaFlag.MP4; sourceTree = "<group>"; };
+		567823B226E1C94F00706CDE /* Effect1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Effect1.gif; sourceTree = "<group>"; };
+		56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRepo.swift; sourceTree = "<group>"; };
+		56EFF0EB26E24F6A00E643DD /* mentalCareVideo.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalCareVideo.MP4; sourceTree = "<group>"; };
+		56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseButton.swift; sourceTree = "<group>"; };
+		56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseMaker.swift; sourceTree = "<group>"; };
+		56EFF0F526E455C800E643DD /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerMaker.swift; sourceTree = "<group>"; };
+		56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerTextView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5678236726E0EB3500706CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5678236126E0EB3500706CDE = {
+			isa = PBXGroup;
+			children = (
+				5678236C26E0EB3500706CDE /* ShowerChat */,
+				5678236B26E0EB3500706CDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5678236B26E0EB3500706CDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5678236A26E0EB3500706CDE /* ShowerChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5678236C26E0EB3500706CDE /* ShowerChat */ = {
+			isa = PBXGroup;
+			children = (
+				5678236D26E0EB3500706CDE /* ShowerChatApp.swift */,
+				5678237626E0EB3700706CDE /* Info.plist */,
+				5678237F26E0EB5B00706CDE /* Model */,
+				5678237E26E0EB5400706CDE /* View */,
+				5678237D26E0EB4C00706CDE /* Controller */,
+				567823B026E1C90A00706CDE /* Videos */,
+				5678237126E0EB3700706CDE /* Assets.xcassets */,
+				5678237326E0EB3700706CDE /* Preview Content */,
+			);
+			path = ShowerChat;
+			sourceTree = "<group>";
+		};
+		5678237326E0EB3700706CDE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5678237426E0EB3700706CDE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5678237D26E0EB4C00706CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */,
+				56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */,
+				56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */,
+				56EFF0F526E455C800E643DD /* CircleButton.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5678237E26E0EB5400706CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5678238626E0EB8100706CDE /* ChatScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5678237F26E0EB5B00706CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */,
+				56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		567823B026E1C90A00706CDE /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				56EFF0EB26E24F6A00E643DD /* mentalCareVideo.MP4 */,
+				567823B226E1C94F00706CDE /* Effect1.gif */,
+				567823B126E1C94F00706CDE /* KoreaFlag.MP4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5678236926E0EB3500706CDE /* ShowerChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5678237926E0EB3700706CDE /* Build configuration list for PBXNativeTarget "ShowerChat" */;
+			buildPhases = (
+				5678236626E0EB3500706CDE /* Sources */,
+				5678236726E0EB3500706CDE /* Frameworks */,
+				5678236826E0EB3500706CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShowerChat;
+			productName = ShowerChat;
+			productReference = 5678236A26E0EB3500706CDE /* ShowerChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5678236226E0EB3500706CDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					5678236926E0EB3500706CDE = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 5678236526E0EB3500706CDE /* Build configuration list for PBXProject "ShowerChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5678236126E0EB3500706CDE;
+			productRefGroup = 5678236B26E0EB3500706CDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5678236926E0EB3500706CDE /* ShowerChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5678236826E0EB3500706CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EFF0EC26E24F6A00E643DD /* mentalCareVideo.MP4 in Resources */,
+				5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */,
+				567823B426E1C94F00706CDE /* Effect1.gif in Resources */,
+				567823B326E1C94F00706CDE /* KoreaFlag.MP4 in Resources */,
+				5678237226E0EB3700706CDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5678236626E0EB3500706CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EFF0F026E44D4B00E643DD /* UserResponseButton.swift in Sources */,
+				56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */,
+				56EFF0F626E455C800E643DD /* CircleButton.swift in Sources */,
+				5678236E26E0EB3500706CDE /* ShowerChatApp.swift in Sources */,
+				56EFF0F326E44D9600E643DD /* UserResponseMaker.swift in Sources */,
+				56BBD26C26E4A9B500FB8AE6 /* PlayRepo.swift in Sources */,
+				56EFF0F926E456B100E643DD /* ChatBotAnswerMaker.swift in Sources */,
+				5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5678237726E0EB3700706CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5678237826E0EB3700706CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5678237A26E0EB3700706CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"ShowerChat/Preview Content\"";
+				DEVELOPMENT_TEAM = NH969KSEYX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShowerChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoreaExpressSmt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DEV.KoreaExpress_EXPIRES_2022_07_28;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5678237B26E0EB3700706CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"ShowerChat/Preview Content\"";
+				DEVELOPMENT_TEAM = NH969KSEYX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShowerChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoreaExpressSmt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DEV.KoreaExpress_EXPIRES_2022_07_28;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5678236526E0EB3500706CDE /* Build configuration list for PBXProject "ShowerChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5678237726E0EB3700706CDE /* Debug */,
+				5678237826E0EB3700706CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5678237926E0EB3700706CDE /* Build configuration list for PBXNativeTarget "ShowerChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5678237A26E0EB3700706CDE /* Debug */,
+				5678237B26E0EB3700706CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5678236226E0EB3500706CDE /* Project object */;
+}

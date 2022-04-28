@@ -30,7 +30,7 @@ struct DiaryView: View {
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 28, weight: .light))
                     }
-                    .padding(.leading, 10)
+                    .padding(.leading, 20)
                     Spacer()
                     Text("한줄일기")
                         .font(Font.custom("AppleSDGothicNeo-Medium", size: 20))
@@ -39,6 +39,9 @@ struct DiaryView: View {
                         navigation = "mainview"
                         if moodSelected != "기분 선택" {
                             diaryContents.append(contentsOf: moodSelected)
+                        }
+                        if !diaryContents.isEmpty {
+                            SharedRepo.sharedVariables.onelineDiaryWritten = true
                         }
                         #if PROTOCOL_SERVER
                         clientSocket.send(message: diaryContents)
@@ -51,8 +54,8 @@ struct DiaryView: View {
                     }
                 }
                 .foregroundColor(.black)
-                .padding(.leading, 10)
-                .padding(.top, 5)
+                .padding(.top, 63)
+                
                 Divider()
                 Spacer()
                 Image(faceSelected)
@@ -103,6 +106,7 @@ struct DiaryView: View {
                     }
                 }
             })
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

@@ -18,6 +18,7 @@ struct TomorrowMissionButton: View {
                     HStack {
                         Text(missionContents)
                             .font(Font.custom("AppleSDGothicNeo-Light", size: 17))
+                            .foregroundColor(Color(red: 18 / 255, green: 18 / 255, blue: 18 / 255))
                         Spacer()
                     }
                 }
@@ -28,11 +29,11 @@ struct TomorrowMissionButton: View {
         .frame(width: 300, height: 40)
         .foregroundColor(.gray)
         .padding(.all)
-        .background(Color.yellow.opacity(0.3))
+        .background(Color(red: 255 / 255, green: 215 / 255, blue: 174 / 255))
         .cornerRadius(8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.blue, lineWidth: 1)
+                .stroke(Color(red: 255 / 255, green: 215 / 255, blue: 174 / 255), lineWidth: 1)
         )
         .multilineTextAlignment(.center)
         .animation(.easeIn)

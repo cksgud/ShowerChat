@@ -23,7 +23,7 @@ struct AudioView: View {
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 28, weight: .light))
                     }
-                    .padding(.leading, 10)
+                    .padding(.leading, 20)
                     Spacer()
                     Text("어린왕자")
                         .font(Font.custom("AppleSDGothicNeo", size: 20))
@@ -41,8 +41,7 @@ struct AudioView: View {
                     }
                 }
                 .foregroundColor(.black)
-                .padding(.leading, 10)
-                .padding(.top, 5)
+                .padding(.top, 63)
                 
                 Divider()
                 Spacer()
@@ -52,6 +51,7 @@ struct AudioView: View {
                 
                 Spacer()
             }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

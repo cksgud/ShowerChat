@@ -49,7 +49,6 @@ extension ChatBotAnswerData {
                 📝 한줄 일기로 남겨볼래요?
                 """]),
             ChatBotAnswerData(answer: ["""
-                
                 """]),
             ChatBotAnswerData(answer: ["""
                 좋아요. 내가 가진 소중한 것들에 대해서

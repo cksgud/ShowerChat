@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+var dayDates = Date().getDayDate()
+
 @main
 struct ShowerChatApp: App {
     var body: some Scene {

@@ -24,13 +24,16 @@ struct LetterView: View {
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 28, weight: .light))
                     }
-                    .padding(.leading, 10)
+                    .padding(.leading, 20)
                     Spacer()
                     Text("편지쓰기")
                         .font(Font.custom("AppleSDGothicNeo-Medium", size: 20))
                     Spacer()
                     Button(action: {
                         navigation = "mainview"
+                        if !letterContents.isEmpty {
+                            SharedRepo.sharedVariables.letterWritten = true
+                        }
                         #if PROTOCOL_SERVER
                         clientSocket.send(message: letterContents)
                         #endif
@@ -41,8 +44,7 @@ struct LetterView: View {
                     }
                 }
                 .foregroundColor(.black)
-                .padding(.leading, 10)
-                .padding(.top, 5)
+                .padding(.top, 63)
                 
                 VStack {
                     HStack {
@@ -53,7 +55,7 @@ struct LetterView: View {
                             .frame(width: 40, height: 40)
                             .padding(.leading, 10)
                         Text("Daniel")
-                            .font(Font.custom("HelveticaNeue", size: 20))
+                            .font(Font.custom("HelveticaNeue-Bold", size: 20))
                             .padding(.leading, 10)
                     }
                     .padding()
@@ -66,12 +68,13 @@ struct LetterView: View {
                     
                     TextField("", text: $letterContents)
                         .padding()
+                        .font(Font.custom("AppleSDGothicNeo-Regular", size: 20))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                         .accentColor(.white)
                     Spacer()
                 }
-                .background(Color.green.opacity(0.5))
+                .background(Color(red: 110 / 255, green: 217 / 255, blue: 178 / 255))
                 .ignoresSafeArea(edges: .all)
             }
             .onAppear(perform: {
@@ -81,6 +84,7 @@ struct LetterView: View {
                 clientSocket.connect(ip: "34.127.68.142", port: 8008)
                 #endif
             })
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

@@ -40,10 +40,7 @@ struct MusicPlayer: View {
             }
             Image(systemName: "xmark").padding(.trailing, 20)
                 .onTapGesture {
-                    goNext.toggle()
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-                        goNext.toggle()
-                    }
+                    playNextSmartly(goNext: $goNext)
                     SharedRepo.sharedVariables.response_type.removeAll()
                     #if PROTOCOL_LOCAL
                     SharedRepo.sharedVariables.user_response_data.removeAll()

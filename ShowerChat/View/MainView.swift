@@ -11,12 +11,11 @@ import DropDown
 struct MainView: View {
     @State private var missionSelected: String?
     
-//    let topPadding = CGFloat(50)//UIApplication.shared.keyWindow!.safeAreaInsets.top
-//    let bottomPadding = CGFloat(35)//UIApplication.shared.keyWindow!.safeAreaInsets.bottom
-    
     var body: some View {
         if missionSelected == "chatscreen" {
             ChatScreen().environmentObject(Connection())
+        } else if missionSelected == "livechat" {
+            LiveChatView(liveChattingText: [String]())
         } else if missionSelected == "diary" {
             DiaryView().environmentObject(Connection())
         } else if missionSelected == "letter" {
@@ -29,11 +28,11 @@ struct MainView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        
+                        missionSelected = "livechat"
                     }) {
                         Image("icPlus")
                     }
-                    .padding(.leading, 15)
+                    .padding(.leading, 24)
                     
                     Spacer()
                     
@@ -42,35 +41,82 @@ struct MainView: View {
                     }) {
                         Image("icMenu")
                     }
-                    .padding(.trailing, 15)
+                    .padding(.trailing, 24)
                 }
-//                .padding(.top, 2)
-                .padding(.bottom, 30)
 
                 Image(systemName: "link")
                     .foregroundColor(.white)
                     .background(MainProfile())
-                    .offset(y: -30)
                     .onTapGesture {
                         missionSelected = "chatscreen"
                     }
+                    .padding(.bottom, 28)
 
+                HStack {
+                    Text("Daniel").font(Font.custom("HelveticaNeue-Bold", size: 21)).offset(y: -2)
+                    Text("님은 ").font(Font.custom("AppleSDGothicNeo-Light", size: 19)).offset(x: -5)
+                    Text("강철멘탈").font(Font.custom("AppleSDGothicNeo-Light", size: 19)).foregroundColor(.blue).offset(x: -15)
+                    Text("입니다").font(Font.custom("AppleSDGothicNeo-Light", size: 19)).offset(x: -23)
+                }
+                .offset(x: 15)
+                
+                Text("상담사 Melissa와 매칭되었습니다.").font(Font.custom("AppleSDGothicNeo-UltraLight", size: 13))
+                    .padding(.bottom, 35)
+                
+                HStack {
+                    Spacer()
+                    ForEach(0...dayDates.count-1, id:\.self) { num in
+                        VStack {
+                            if SharedRepo.sharedVariables.dayOfTheWeek[num] == "토" || SharedRepo.sharedVariables.dayOfTheWeek[num] == "일" {
+                                Text(SharedRepo.sharedVariables.dayOfTheWeek[num]).font(Font.custom("AppleSDGothicNeo-Regular", size: 12)).foregroundColor(.red)
+                            } else {
+                                Text(SharedRepo.sharedVariables.dayOfTheWeek[num]).font(Font.custom("AppleSDGothicNeo-Regular", size: 12))
+                            }
+                            Text(dayDates[num]).font(Font.custom("HelveticaNeue-Medium", size: 19))
+                            Spacer().frame(width: 0, height: 11)
+                            if SharedRepo.sharedVariables.dayOfTheWeek[num] == SharedRepo.sharedVariables.dayOfToday {
+                                Rectangle()
+                                    .fill(Color.blue)
+                                    .frame(width: 32, height: 3)
+                                    .offset(x: -1)
+                            }
+                        }
+                        Spacer()
+                    }
+                }
+                
                 ScrollView {
-                    Image("mainComponents")
+                    Spacer().frame(width: 0, height: 2)
+                    Image("graphReports")
                         .resizable()
-                        .frame(height: 400)
+                        .frame(width: 375, height: 211)
 
                     VStack {
-                        MainMissionText(missionText: "불안 지수를 낮추기 위한 미션하기!")
+                        HStack {
+                            MainMissionText(missionText: "불안 지수를 낮추기 위한 미션하기!")
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
                         MainMissionButton(missionName: "한줄일기", missionContents: "오늘 하루 어땠나요?!", missionSelected: $missionSelected)
                         MainMissionButton(missionName: "편지쓰기", missionContents: "마음을 띄우는 편지쓰기", missionSelected: $missionSelected)
                         MainMissionButton(missionName: "오디오", missionContents: "\"어린왕자\"로 내 마음 들여다보기", missionSelected: $missionSelected)
                         MainMissionButton(missionName: "명상", missionContents: "생각 비우기 (부정적인 생각 없애기)", missionSelected: $missionSelected)
 
-                        MainMissionText(missionText: "내일의 Special 한 미션이 있어요~")
+                        HStack {
+                            MainMissionText(missionText: "내일의 Special 한 미션이 있어요~")
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
                         TomorrowMissionButton(missionContents: "👀 내일의 미션 살짝 보러 갈까요~?!")
 
-                        MainMissionText(missionText: "축하합니다! 뱃지를 획득했어요")
+                        HStack {
+                            MainMissionText(missionText: "축하합니다! 뱃지를 획득했어요")
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
                         HStack {
                             Image("goodjobSticker")
                             Image("missionClearStickerDisable")
@@ -80,9 +126,9 @@ struct MainView: View {
                     }
                 }
                 .background(Color.gray.opacity(0.2))
-                .ignoresSafeArea(edges: .all)
             }
-            .ignoresSafeArea(edges: .bottom)
+            .padding(.top, 50)
+            .ignoresSafeArea(edges: .all)
         }
     }
 }

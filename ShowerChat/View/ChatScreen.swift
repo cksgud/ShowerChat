@@ -17,8 +17,8 @@ struct ChatScreen: View {
     @State private var selectionMentalCare: String?
     @State var goNext = false
     
-    let topPadding = UIApplication.shared.keyWindow!.safeAreaInsets.top
-    let bottomPadding = UIApplication.shared.keyWindow!.safeAreaInsets.bottom
+//    let topPadding = UIApplication.shared.keyWindow!.safeAreaInsets.top
+//    let bottomPadding = UIApplication.shared.keyWindow!.safeAreaInsets.bottom
     
 #if PROTOCOL_LOCAL
     let chatBotAnswerData = ChatBotAnswerData.all()
@@ -30,9 +30,11 @@ struct ChatScreen: View {
             MeditationView()
         } else if selectionMentalCare == "mainview" {
             MainView()
+        } else if selectionMentalCare == "afterchat" {
+            AfterChatView()
         } else {
             ZStack {
-                MentalVideosPlayer(goNext: $goNext)
+                SmartVideoPlayer(goNext: $goNext)
                     .scaleEffect(x: 1.3, y: 1.3, anchor: .center)
                 VStack {
                     HStack {
@@ -48,7 +50,7 @@ struct ChatScreen: View {
                         Spacer()
                         Button(action: {
                             selectionMentalCare = "mainview"
-                            SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                            VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                         }) {
                             Image("icClose")
                                 .frame(width:24, height: 24)
@@ -127,10 +129,9 @@ struct ChatScreen: View {
                     #endif
                 }
                 .edgesIgnoringSafeArea(.bottom)
-                .padding(.bottom, 35 - bottomPadding)
+                .padding(.bottom, 1)//35 - bottomPadding)
             }
             .onAppear(perform: {
-                SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.play()
                 #if PROTOCOL_LOCAL
                 clientSocket.connect(ip: "192.168.10.102", port: 8000)
                 #else

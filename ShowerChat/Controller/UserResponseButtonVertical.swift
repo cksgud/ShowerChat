@@ -26,27 +26,27 @@ struct UserResponseButtonVertical: View {
             foregroundColor = .black
             SharedRepo.sharedVariables.onAppearNumber = 1.0
             if userResponse.contains("명상") {
+                VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                 self.selectionMentalCare = "meditation"
+            } else if userResponse.contains("대화 종료") {
+                VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
+                self.selectionMentalCare = "afterchat"
             } else if userResponse.contains("일기") {
-                SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                playNextSmartly(goNext: $goNext)
                 #if PROTOCOL_LOCAL
                 actionForButton(userResponse: userResponse, clientSocket: clientSocket)
                 #else
                 actionForButton(userResponse: userResponse, responseType: responseType, clientSocket: clientSocket)
                 #endif
             } else if userResponse.contains("Better") {
-                SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                 #if PROTOCOL_LOCAL
                 actionForButton(userResponse: userResponse, clientSocket: clientSocket)
                 #else
                 actionForButton(userResponse: userResponse, responseType: responseType, clientSocket: clientSocket)
                 #endif
             } else {//명상하러 가기 버튼 누른 후 되돌아올 시 예외처리
-                goNext.toggle()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-                    goNext.toggle()
-                }
-                SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                playNextSmartly(goNext: $goNext)
                 #if PROTOCOL_LOCAL
                 actionForButton(userResponse: userResponse, clientSocket: clientSocket)
                 #else
@@ -58,15 +58,13 @@ struct UserResponseButtonVertical: View {
             if userResponse.contains("▶") {
                 MusicButton(imageName: "albumIcon", musicName: "Better Together", artistName: "Pate Jonas")
             } else {
-                Text(userResponse)
-                    .font(Font.custom("AppleSDGothicNeo-Light", size: 16))
+                ResponseButtonText(userResponse: userResponse)
             }
             #elseif PROTOCOL_SERVER
             if responseType.contains("music") {
                 MusicButton(imageName: "albumIcon", musicName: "Better Together", artistName: "Pate Jonas")
             } else {
-                Text(userResponse)
-                    .font(Font.custom("AppleSDGothicNeo-Light", size: 16))
+                ResponseButtonText(userResponse: userResponse)
             }
             #endif
         }
@@ -77,6 +75,7 @@ struct UserResponseButtonVertical: View {
         .cornerRadius(17)
         .overlay(
             RoundedRectangle(cornerRadius: 17)
+//                .stroke(Color(red: 153 / 255, green: 153 / 255, blue: 154 / 255), lineWidth: 1)
                 .stroke(Color.white, lineWidth: 1)
         )
         .multilineTextAlignment(.center)
@@ -93,33 +92,3 @@ struct UserResponseButtonVertical: View {
         .transition(.move(edge: .bottom))
     }
 }
-
-#if PROTOCOL_LOCAL
-func actionForButton(userResponse: String, clientSocket: Connection) {
-    SharedRepo.sharedVariables.response_type.removeAll()
-    SharedRepo.sharedVariables.user_response_data.removeAll()
-    SharedRepo.sharedVariables.user_response_data.append(userResponse)
-    SharedRepo.sharedVariables.user_response_picked = userResponse
-    
-    SharedRepo.sharedVariables.user_response_count += 1
-}
-
-#else
-func actionForButton(userResponse: String, responseType: String, clientSocket: Connection) {
-    SharedRepo.sharedVariables.user_response.removeAll()
-    SharedRepo.sharedVariables.user_response.append(userResponse)
-    if responseType.contains("music") {
-        SharedRepo.sharedVariables.musicPlayerOn.toggle()
-        SharedRepo.sharedVariables.chatbot.removeAll()
-        SharedRepo.sharedVariables.response_type.removeAll()
-    } else if responseType.contains("diary") {
-        SharedRepo.sharedVariables.onelineDiaryOn.toggle()
-        SharedRepo.sharedVariables.chatbot.removeAll()
-        SharedRepo.sharedVariables.response_type.removeAll()
-    } else {
-        clientSocket.send(message: userResponse)
-    }
-    
-    SharedRepo.sharedVariables.user_response_count += 1
-}
-#endif

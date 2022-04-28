@@ -36,13 +36,9 @@ struct Diary: View {
                             .font(Font.custom("AppleSDGothicNeo-Medium", size: 16))
                             .padding(.trailing, 10)
                             .onTapGesture {
-                                goNext.toggle()
-                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-                                    goNext.toggle()
-                                }
                                 clientSocket.send(message: "일기작성취소")
                                 alertPresent = 1
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                                     withAnimation(.easeIn(duration: 1.0)) {
                                         SharedRepo.sharedVariables.response_type.removeAll()
                                         #if PROTOCOL_LOCAL
@@ -52,6 +48,7 @@ struct Diary: View {
                                         #endif
                                         SharedRepo.sharedVariables.user_response_picked.removeAll()
                                         SharedRepo.sharedVariables.user_response_count += 1
+                                        playNextSmartly(goNext: $goNext)
                                     }
                                 })
                             }
@@ -62,13 +59,10 @@ struct Diary: View {
                             .padding(.trailing, 20)
                             .foregroundColor(.black)
                             .onTapGesture {
-                                goNext.toggle()
-                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-                                    goNext.toggle()
-                                }
                                 if !diaryContents.isEmpty {
 //                                    clientSocket.send(message: diaryContents)
                                     SharedRepo.sharedVariables.diaryData.append(diaryContents)
+                                    SharedRepo.sharedVariables.onelineDiaryWritten = true
                                 }
                                 alertPresent = 2
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
@@ -83,6 +77,7 @@ struct Diary: View {
                                         #endif
                                         SharedRepo.sharedVariables.user_response_picked.removeAll()
                                         SharedRepo.sharedVariables.user_response_count += 1
+                                        playNextSmartly(goNext: $goNext)
                                     }
                                 })
                             }

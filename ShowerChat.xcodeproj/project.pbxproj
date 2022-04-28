@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		43B1A29C7DD76E71A81121C4 /* Pods_ShowerChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE9E139EBC081F07DA3C1D /* Pods_ShowerChat.framework */; };
+		5622C064271BC449001CFCAC /* mentalcare_01_06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5622C063271BC449001CFCAC /* mentalcare_01_06.mp4 */; };
+		5622C067271BC485001CFCAC /* ButtonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622C066271BC485001CFCAC /* ButtonAPI.swift */; };
+		5622C069271BC492001CFCAC /* ResponseButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622C068271BC492001CFCAC /* ResponseButtonText.swift */; };
 		564F59E527141CDC00E07E8E /* VideoControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */; };
-		564F59F527141D6A00E07E8E /* mentalcare_01_03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59E727141D1100E07E8E /* mentalcare_01_03.mp4 */; };
-		564F59F627141D6A00E07E8E /* mentalcare_01_13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59E827141D1800E07E8E /* mentalcare_01_13.mp4 */; };
-		564F59F727141D6A00E07E8E /* mentalcare_01_09.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59E927141D1F00E07E8E /* mentalcare_01_09.mp4 */; };
 		564F59F827141D6A00E07E8E /* mentalcare_01_14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */; };
-		564F59F927141D6A00E07E8E /* mentalcare_01_11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EB27141D2E00E07E8E /* mentalcare_01_11.mp4 */; };
-		564F59FA27141D6A00E07E8E /* mentalcare_01_05.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EC27141D3600E07E8E /* mentalcare_01_05.mp4 */; };
-		564F59FB27141D6A00E07E8E /* mentalcare_01_02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59ED27141D3C00E07E8E /* mentalcare_01_02.mp4 */; };
-		564F59FC27141D6A00E07E8E /* mentalcare_01_06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EE27141D4400E07E8E /* mentalcare_01_06.mp4 */; };
-		564F59FD27141D6A00E07E8E /* mentalcare_01_12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EF27141D4900E07E8E /* mentalcare_01_12.mp4 */; };
-		564F59FE27141D6A00E07E8E /* mentalcare_01_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59F027141D4F00E07E8E /* mentalcare_01_01.mp4 */; };
-		564F59FF27141D6A00E07E8E /* mentalcare_01_08.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59F127141D5700E07E8E /* mentalcare_01_08.mp4 */; };
-		564F5A0027141D6A00E07E8E /* mentalcare_01_07.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59F227141D5D00E07E8E /* mentalcare_01_07.mp4 */; };
-		564F5A0127141D6A00E07E8E /* mentalcare_01_04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59F327141D6300E07E8E /* mentalcare_01_04.mp4 */; };
-		564F5A0227141D6A00E07E8E /* mentalcare_01_10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59F427141D6A00E07E8E /* mentalcare_01_10.mp4 */; };
+		564F5A1027152DF900E07E8E /* mentalcare_01_09.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0327152DD500E07E8E /* mentalcare_01_09.mp4 */; };
+		564F5A1127152DF900E07E8E /* mentalcare_01_10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0427152DD800E07E8E /* mentalcare_01_10.mp4 */; };
+		564F5A1227152DF900E07E8E /* mentalcare_01_13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0527152DDC00E07E8E /* mentalcare_01_13.mp4 */; };
+		564F5A1327152DF900E07E8E /* mentalcare_01_07.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0627152DDE00E07E8E /* mentalcare_01_07.mp4 */; };
+		564F5A1427152DF900E07E8E /* mentalcare_01_12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0727152DE100E07E8E /* mentalcare_01_12.mp4 */; };
+		564F5A1527152DF900E07E8E /* mentalcare_01_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0827152DE300E07E8E /* mentalcare_01_01.mp4 */; };
+		564F5A1627152DF900E07E8E /* mentalcare_01_05.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0927152DE600E07E8E /* mentalcare_01_05.mp4 */; };
+		564F5A1727152DF900E07E8E /* mentalcare_01_02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0A27152DEA00E07E8E /* mentalcare_01_02.mp4 */; };
+		564F5A1927152DF900E07E8E /* mentalcare_01_03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0C27152DF100E07E8E /* mentalcare_01_03.mp4 */; };
+		564F5A1A27152DF900E07E8E /* mentalcare_01_08.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0D27152DF400E07E8E /* mentalcare_01_08.mp4 */; };
+		564F5A1B27152DF900E07E8E /* mentalcare_01_11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0E27152DF700E07E8E /* mentalcare_01_11.mp4 */; };
+		564F5A1C27152DF900E07E8E /* mentalcare_01_04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0F27152DF900E07E8E /* mentalcare_01_04.mp4 */; };
 		564FBD28270D49A30043E4F9 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD27270D49A30043E4F9 /* DiaryView.swift */; };
 		564FBD2C270D4D9E0043E4F9 /* MainProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD2B270D4D9E0043E4F9 /* MainProfile.swift */; };
 		564FBD30270D8D7C0043E4F9 /* MainMissionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD2F270D8D7C0043E4F9 /* MainMissionButton.swift */; };
@@ -31,6 +33,8 @@
 		564FBD36270D9E5F0043E4F9 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD35270D9E5F0043E4F9 /* LetterView.swift */; };
 		564FBD38270D9E810043E4F9 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD37270D9E810043E4F9 /* AudioView.swift */; };
 		564FBD3E270E91EC0043E4F9 /* SelectMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FBD3D270E91EC0043E4F9 /* SelectMood.swift */; };
+		56638CD4271FABB50092872C /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD3271FABB50092872C /* ChatBubble.swift */; };
+		56638CD6271FE1D80092872C /* WeekDaysData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56638CD5271FE1D80092872C /* WeekDaysData.swift */; };
 		5678236E26E0EB3500706CDE /* ShowerChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5678236D26E0EB3500706CDE /* ShowerChatApp.swift */; };
 		5678237226E0EB3700706CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5678237126E0EB3700706CDE /* Assets.xcassets */; };
 		5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5678237426E0EB3700706CDE /* Preview Assets.xcassets */; };
@@ -40,6 +44,8 @@
 		569CA1F3270ED09500C026C3 /* SignPainter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F2270ED09500C026C3 /* SignPainter.ttc */; };
 		569CA1F5270ED0C100C026C3 /* HelveticaNeue.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F4270ED0C100C026C3 /* HelveticaNeue.ttc */; };
 		569CA1F7270EDF6A00C026C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F6270EDF6A00C026C3 /* LaunchScreen.storyboard */; };
+		56B88559271EE11500B52221 /* LiveChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B88558271EE11500B52221 /* LiveChatView.swift */; };
+		56B8855B271EE41700B52221 /* LiveChatUserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8855A271EE41700B52221 /* LiveChatUserTextField.swift */; };
 		56BBD26C26E4A9B500FB8AE6 /* SharedRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBD26B26E4A9B500FB8AE6 /* SharedRepo.swift */; };
 		56C2020426FDD8370051FFFD /* Bluebird_BumyGoldson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56C2020226FDD8360051FFFD /* Bluebird_BumyGoldson.mp3 */; };
 		56C202262702B6C80051FFFD /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C202252702B6C80051FFFD /* MusicPlayer.swift */; };
@@ -57,8 +63,10 @@
 		56C202CB27059BB00051FFFD /* ReportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C202CA27059BB00051FFFD /* ReportDetailView.swift */; };
 		56C202D92705E2210051FFFD /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C202D82705E2210051FFFD /* WebSocket.swift */; };
 		56C202DD2705E27E0051FFFD /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C202DC2705E27E0051FFFD /* Package.swift */; };
+		56D00069271BF891005C60D9 /* mentalcare_idle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56D00068271BF891005C60D9 /* mentalcare_idle.mp4 */; };
 		56D0F90226FC6EA300686C96 /* ProfileArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0F90126FC6EA300686C96 /* ProfileArea.swift */; };
 		56D0F90B26FC728A00686C96 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0F90A26FC728A00686C96 /* ProfileData.swift */; };
+		56D7C965271D43DD001A6BF9 /* AfterChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7C964271D43DD001A6BF9 /* AfterChatView.swift */; };
 		56EFF0F026E44D4B00E643DD /* UserResponseButtonHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0EF26E44D4B00E643DD /* UserResponseButtonHorizontal.swift */; };
 		56EFF0F326E44D9600E643DD /* UserResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F226E44D9600E643DD /* UserResponseData.swift */; };
 		56EFF0F926E456B100E643DD /* ChatBotAnswerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */; };
@@ -68,21 +76,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5622C063271BC449001CFCAC /* mentalcare_01_06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_06.mp4; sourceTree = "<group>"; };
+		5622C066271BC485001CFCAC /* ButtonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAPI.swift; sourceTree = "<group>"; };
+		5622C068271BC492001CFCAC /* ResponseButtonText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseButtonText.swift; sourceTree = "<group>"; };
 		564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoControllerAPI.swift; sourceTree = "<group>"; };
-		564F59E727141D1100E07E8E /* mentalcare_01_03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_03.mp4; sourceTree = "<group>"; };
-		564F59E827141D1800E07E8E /* mentalcare_01_13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_13.mp4; sourceTree = "<group>"; };
-		564F59E927141D1F00E07E8E /* mentalcare_01_09.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_09.mp4; sourceTree = "<group>"; };
 		564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_14.mp4; sourceTree = "<group>"; };
-		564F59EB27141D2E00E07E8E /* mentalcare_01_11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_11.mp4; sourceTree = "<group>"; };
-		564F59EC27141D3600E07E8E /* mentalcare_01_05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_05.mp4; sourceTree = "<group>"; };
-		564F59ED27141D3C00E07E8E /* mentalcare_01_02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_02.mp4; sourceTree = "<group>"; };
-		564F59EE27141D4400E07E8E /* mentalcare_01_06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_06.mp4; sourceTree = "<group>"; };
-		564F59EF27141D4900E07E8E /* mentalcare_01_12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_12.mp4; sourceTree = "<group>"; };
-		564F59F027141D4F00E07E8E /* mentalcare_01_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_01.mp4; sourceTree = "<group>"; };
-		564F59F127141D5700E07E8E /* mentalcare_01_08.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_08.mp4; sourceTree = "<group>"; };
-		564F59F227141D5D00E07E8E /* mentalcare_01_07.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_07.mp4; sourceTree = "<group>"; };
-		564F59F327141D6300E07E8E /* mentalcare_01_04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_04.mp4; sourceTree = "<group>"; };
-		564F59F427141D6A00E07E8E /* mentalcare_01_10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_10.mp4; sourceTree = "<group>"; };
+		564F5A0327152DD500E07E8E /* mentalcare_01_09.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_09.mp4; sourceTree = "<group>"; };
+		564F5A0427152DD800E07E8E /* mentalcare_01_10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_10.mp4; sourceTree = "<group>"; };
+		564F5A0527152DDC00E07E8E /* mentalcare_01_13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_13.mp4; sourceTree = "<group>"; };
+		564F5A0627152DDE00E07E8E /* mentalcare_01_07.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_07.mp4; sourceTree = "<group>"; };
+		564F5A0727152DE100E07E8E /* mentalcare_01_12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_12.mp4; sourceTree = "<group>"; };
+		564F5A0827152DE300E07E8E /* mentalcare_01_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_01.mp4; sourceTree = "<group>"; };
+		564F5A0927152DE600E07E8E /* mentalcare_01_05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_05.mp4; sourceTree = "<group>"; };
+		564F5A0A27152DEA00E07E8E /* mentalcare_01_02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_02.mp4; sourceTree = "<group>"; };
+		564F5A0C27152DF100E07E8E /* mentalcare_01_03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_03.mp4; sourceTree = "<group>"; };
+		564F5A0D27152DF400E07E8E /* mentalcare_01_08.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_08.mp4; sourceTree = "<group>"; };
+		564F5A0E27152DF700E07E8E /* mentalcare_01_11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_11.mp4; sourceTree = "<group>"; };
+		564F5A0F27152DF900E07E8E /* mentalcare_01_04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_04.mp4; sourceTree = "<group>"; };
 		564FBD27270D49A30043E4F9 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		564FBD2B270D4D9E0043E4F9 /* MainProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfile.swift; sourceTree = "<group>"; };
 		564FBD2F270D8D7C0043E4F9 /* MainMissionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMissionButton.swift; sourceTree = "<group>"; };
@@ -91,6 +101,8 @@
 		564FBD35270D9E5F0043E4F9 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		564FBD37270D9E810043E4F9 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		564FBD3D270E91EC0043E4F9 /* SelectMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMood.swift; sourceTree = "<group>"; };
+		56638CD3271FABB50092872C /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		56638CD5271FE1D80092872C /* WeekDaysData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysData.swift; sourceTree = "<group>"; };
 		5678236A26E0EB3500706CDE /* ShowerChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowerChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5678236D26E0EB3500706CDE /* ShowerChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerChatApp.swift; sourceTree = "<group>"; };
 		5678237126E0EB3700706CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +114,8 @@
 		569CA1F2270ED09500C026C3 /* SignPainter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttc; sourceTree = "<group>"; };
 		569CA1F4270ED0C100C026C3 /* HelveticaNeue.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttc; sourceTree = "<group>"; };
 		569CA1F6270EDF6A00C026C3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56B88558271EE11500B52221 /* LiveChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatView.swift; sourceTree = "<group>"; };
+		56B8855A271EE41700B52221 /* LiveChatUserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatUserTextField.swift; sourceTree = "<group>"; };
 		56BBD26B26E4A9B500FB8AE6 /* SharedRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRepo.swift; sourceTree = "<group>"; };
 		56C2020226FDD8360051FFFD /* Bluebird_BumyGoldson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bluebird_BumyGoldson.mp3; sourceTree = "<group>"; };
 		56C202252702B6C80051FFFD /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
@@ -119,8 +133,10 @@
 		56C202CA27059BB00051FFFD /* ReportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailView.swift; sourceTree = "<group>"; };
 		56C202D82705E2210051FFFD /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		56C202DC2705E27E0051FFFD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		56D00068271BF891005C60D9 /* mentalcare_idle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_idle.mp4; sourceTree = "<group>"; };
 		56D0F90126FC6EA300686C96 /* ProfileArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileArea.swift; sourceTree = "<group>"; };
 		56D0F90A26FC728A00686C96 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		56D7C964271D43DD001A6BF9 /* AfterChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterChatView.swift; sourceTree = "<group>"; };
 		56EFF0EF26E44D4B00E643DD /* UserResponseButtonHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseButtonHorizontal.swift; sourceTree = "<group>"; };
 		56EFF0F226E44D9600E643DD /* UserResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseData.swift; sourceTree = "<group>"; };
 		56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerData.swift; sourceTree = "<group>"; };
@@ -144,23 +160,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5622C065271BC463001CFCAC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */,
+				5622C066271BC485001CFCAC /* ButtonAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		564F59E627141CEE00E07E8E /* MentalVideos */ = {
 			isa = PBXGroup;
 			children = (
-				564F59F027141D4F00E07E8E /* mentalcare_01_01.mp4 */,
-				564F59ED27141D3C00E07E8E /* mentalcare_01_02.mp4 */,
-				564F59E727141D1100E07E8E /* mentalcare_01_03.mp4 */,
-				564F59F327141D6300E07E8E /* mentalcare_01_04.mp4 */,
-				564F59EC27141D3600E07E8E /* mentalcare_01_05.mp4 */,
-				564F59EE27141D4400E07E8E /* mentalcare_01_06.mp4 */,
-				564F59F227141D5D00E07E8E /* mentalcare_01_07.mp4 */,
-				564F59F127141D5700E07E8E /* mentalcare_01_08.mp4 */,
-				564F59E927141D1F00E07E8E /* mentalcare_01_09.mp4 */,
-				564F59F427141D6A00E07E8E /* mentalcare_01_10.mp4 */,
-				564F59EB27141D2E00E07E8E /* mentalcare_01_11.mp4 */,
-				564F59EF27141D4900E07E8E /* mentalcare_01_12.mp4 */,
-				564F59E827141D1800E07E8E /* mentalcare_01_13.mp4 */,
+				564F5A0827152DE300E07E8E /* mentalcare_01_01.mp4 */,
+				564F5A0A27152DEA00E07E8E /* mentalcare_01_02.mp4 */,
+				564F5A0C27152DF100E07E8E /* mentalcare_01_03.mp4 */,
+				564F5A0F27152DF900E07E8E /* mentalcare_01_04.mp4 */,
+				564F5A0927152DE600E07E8E /* mentalcare_01_05.mp4 */,
+				5622C063271BC449001CFCAC /* mentalcare_01_06.mp4 */,
+				564F5A0627152DDE00E07E8E /* mentalcare_01_07.mp4 */,
+				564F5A0D27152DF400E07E8E /* mentalcare_01_08.mp4 */,
+				564F5A0327152DD500E07E8E /* mentalcare_01_09.mp4 */,
+				564F5A0427152DD800E07E8E /* mentalcare_01_10.mp4 */,
+				564F5A0E27152DF700E07E8E /* mentalcare_01_11.mp4 */,
+				564F5A0727152DE100E07E8E /* mentalcare_01_12.mp4 */,
+				564F5A0527152DDC00E07E8E /* mentalcare_01_13.mp4 */,
 				564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */,
+				56D00068271BF891005C60D9 /* mentalcare_idle.mp4 */,
 			);
 			path = MentalVideos;
 			sourceTree = "<group>";
@@ -196,6 +222,7 @@
 				5678237D26E0EB4C00706CDE /* Controller */,
 				567823B026E1C90A00706CDE /* Resources */,
 				5678237126E0EB3700706CDE /* Assets.xcassets */,
+				5622C065271BC463001CFCAC /* API */,
 				5678237326E0EB3700706CDE /* Preview Content */,
 			);
 			path = ShowerChat;
@@ -212,9 +239,11 @@
 		5678237D26E0EB4C00706CDE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */,
+				56638CD3271FABB50092872C /* ChatBubble.swift */,
+				56B8855A271EE41700B52221 /* LiveChatUserTextField.swift */,
 				56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */,
 				56C2027827045F850051FFFD /* ChatBotAnswerText.swift */,
+				5622C068271BC492001CFCAC /* ResponseButtonText.swift */,
 				56EFF0EF26E44D4B00E643DD /* UserResponseButtonHorizontal.swift */,
 				56C2023B2703104A0051FFFD /* UserResponseButtonVertical.swift */,
 				56D0F90126FC6EA300686C96 /* ProfileArea.swift */,
@@ -235,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				5678238626E0EB8100706CDE /* ChatScreen.swift */,
+				56B88558271EE11500B52221 /* LiveChatView.swift */,
 				56C2027E270462770051FFFD /* MeditationView.swift */,
 				56C202C427059B400051FFFD /* ReportView.swift */,
 				56C202C727059B800051FFFD /* MainView.swift */,
@@ -242,6 +272,7 @@
 				564FBD27270D49A30043E4F9 /* DiaryView.swift */,
 				564FBD35270D9E5F0043E4F9 /* LetterView.swift */,
 				564FBD37270D9E810043E4F9 /* AudioView.swift */,
+				56D7C964271D43DD001A6BF9 /* AfterChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +283,7 @@
 				56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */,
 				56EFF0F226E44D9600E643DD /* UserResponseData.swift */,
 				56D0F90A26FC728A00686C96 /* ProfileData.swift */,
+				56638CD5271FE1D80092872C /* WeekDaysData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,30 +399,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564F59FD27141D6A00E07E8E /* mentalcare_01_12.mp4 in Resources */,
-				564F59FC27141D6A00E07E8E /* mentalcare_01_06.mp4 in Resources */,
-				564F59F527141D6A00E07E8E /* mentalcare_01_03.mp4 in Resources */,
-				564F59FA27141D6A00E07E8E /* mentalcare_01_05.mp4 in Resources */,
 				56C20275270458B30051FFFD /* AppleSDGothicNeo.ttc in Resources */,
+				564F5A1427152DF900E07E8E /* mentalcare_01_12.mp4 in Resources */,
+				564F5A1B27152DF900E07E8E /* mentalcare_01_11.mp4 in Resources */,
 				5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */,
-				564F59F727141D6A00E07E8E /* mentalcare_01_09.mp4 in Resources */,
+				564F5A1927152DF900E07E8E /* mentalcare_01_03.mp4 in Resources */,
+				564F5A1527152DF900E07E8E /* mentalcare_01_01.mp4 in Resources */,
+				564F5A1227152DF900E07E8E /* mentalcare_01_13.mp4 in Resources */,
+				564F5A1A27152DF900E07E8E /* mentalcare_01_08.mp4 in Resources */,
 				569CA1F1270EC4EC00C026C3 /* Meditation_Report_Background.mp4 in Resources */,
-				564F59FE27141D6A00E07E8E /* mentalcare_01_01.mp4 in Resources */,
+				564F5A1027152DF900E07E8E /* mentalcare_01_09.mp4 in Resources */,
 				569CA1F7270EDF6A00C026C3 /* LaunchScreen.storyboard in Resources */,
-				564F59FF27141D6A00E07E8E /* mentalcare_01_08.mp4 in Resources */,
 				5678237226E0EB3700706CDE /* Assets.xcassets in Resources */,
-				564F59F927141D6A00E07E8E /* mentalcare_01_11.mp4 in Resources */,
-				564F59F627141D6A00E07E8E /* mentalcare_01_13.mp4 in Resources */,
+				5622C064271BC449001CFCAC /* mentalcare_01_06.mp4 in Resources */,
+				564F5A1627152DF900E07E8E /* mentalcare_01_05.mp4 in Resources */,
 				56C2020426FDD8370051FFFD /* Bluebird_BumyGoldson.mp3 in Resources */,
+				564F5A1727152DF900E07E8E /* mentalcare_01_02.mp4 in Resources */,
 				569CA1F5270ED0C100C026C3 /* HelveticaNeue.ttc in Resources */,
 				569CA1F3270ED09500C026C3 /* SignPainter.ttc in Resources */,
+				564F5A1C27152DF900E07E8E /* mentalcare_01_04.mp4 in Resources */,
+				56D00069271BF891005C60D9 /* mentalcare_idle.mp4 in Resources */,
 				564F59F827141D6A00E07E8E /* mentalcare_01_14.mp4 in Resources */,
 				56C202722704580C0051FFFD /* Apple Chancery.ttf in Resources */,
-				564F5A0127141D6A00E07E8E /* mentalcare_01_04.mp4 in Resources */,
-				564F59FB27141D6A00E07E8E /* mentalcare_01_02.mp4 in Resources */,
-				564F5A0027141D6A00E07E8E /* mentalcare_01_07.mp4 in Resources */,
-				564F5A0227141D6A00E07E8E /* mentalcare_01_10.mp4 in Resources */,
+				564F5A1327152DF900E07E8E /* mentalcare_01_07.mp4 in Resources */,
 				56C202C2270599720051FFFD /* GujaratiMT.ttc in Resources */,
+				564F5A1127152DF900E07E8E /* mentalcare_01_10.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B8855B271EE41700B52221 /* LiveChatUserTextField.swift in Sources */,
+				56638CD4271FABB50092872C /* ChatBubble.swift in Sources */,
 				564FBD30270D8D7C0043E4F9 /* MainMissionButton.swift in Sources */,
 				56C202262702B6C80051FFFD /* MusicPlayer.swift in Sources */,
 				56C202CB27059BB00051FFFD /* ReportDetailView.swift in Sources */,
@@ -454,13 +489,16 @@
 				56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */,
 				56D0F90226FC6EA300686C96 /* ProfileArea.swift in Sources */,
 				564FBD32270D94050043E4F9 /* TomorrowMissionButton.swift in Sources */,
+				56B88559271EE11500B52221 /* LiveChatView.swift in Sources */,
 				56C2023C2703104A0051FFFD /* UserResponseButtonVertical.swift in Sources */,
 				564F59E527141CDC00E07E8E /* VideoControllerAPI.swift in Sources */,
 				567A4D3D26EB3FA40034A00C /* TouchMeButtonStyle.swift in Sources */,
+				5622C067271BC485001CFCAC /* ButtonAPI.swift in Sources */,
 				5678236E26E0EB3500706CDE /* ShowerChatApp.swift in Sources */,
 				56C20251270422A30051FFFD /* AlertPopup.swift in Sources */,
 				56C2027927045F850051FFFD /* ChatBotAnswerText.swift in Sources */,
 				56C202DD2705E27E0051FFFD /* Package.swift in Sources */,
+				56D7C965271D43DD001A6BF9 /* AfterChatView.swift in Sources */,
 				56EFF0F326E44D9600E643DD /* UserResponseData.swift in Sources */,
 				56C202D92705E2210051FFFD /* WebSocket.swift in Sources */,
 				56C2025B270433D70051FFFD /* MusicButton.swift in Sources */,
@@ -469,10 +507,12 @@
 				56D0F90B26FC728A00686C96 /* ProfileData.swift in Sources */,
 				564FBD34270D96600043E4F9 /* MainMissionText.swift in Sources */,
 				56BBD26C26E4A9B500FB8AE6 /* SharedRepo.swift in Sources */,
+				5622C069271BC492001CFCAC /* ResponseButtonText.swift in Sources */,
 				56C202402703145A0051FFFD /* Diary.swift in Sources */,
 				564FBD3E270E91EC0043E4F9 /* SelectMood.swift in Sources */,
 				564FBD38270D9E810043E4F9 /* AudioView.swift in Sources */,
 				56FA221B26E89CBD00A830B8 /* Connection.swift in Sources */,
+				56638CD6271FE1D80092872C /* WeekDaysData.swift in Sources */,
 				56EFF0F926E456B100E643DD /* ChatBotAnswerData.swift in Sources */,
 				56C202C527059B400051FFFD /* ReportView.swift in Sources */,
 				5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */,
@@ -615,6 +655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.8;
 				OTHER_SWIFT_FLAGS = "-DPROTOCOL_LOCAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByeBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,7 +682,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-DPROTOCOL_NEWJSON -DPROTOCOL_SERVER";
+				MARKETING_VERSION = 1.1.8;
+				OTHER_SWIFT_FLAGS = "-DPROTOCOL_LOCAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByeBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = BYE_BLUE_RELEASE_2022;

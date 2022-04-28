@@ -12,7 +12,7 @@ struct MeditationView: View {
     var player = AVPlayer(url:  Bundle.main.url(forResource: "Meditation_Report_Background", withExtension: "mp4")!)
     var chatbotPlayer = AVPlayer(url:  Bundle.main.url(forResource: "mentalcare_01_14", withExtension: "mp4")!)
     @State private var foregroundColor = Color.white
-    @State private var backgroundColor = Color.black.opacity(0.3)
+    @State private var backgroundColor = Color.black.opacity(0.2)
     @State private var selectionMentalCare: String?
     
 //    let topPadding = UIApplication.shared.keyWindow!.safeAreaInsets.top
@@ -21,8 +21,8 @@ struct MeditationView: View {
     var body: some View {
         if selectionMentalCare == "chatscreen" {
             ChatScreen().environmentObject(Connection())
-        } else if selectionMentalCare == "report" {
-            ReportView()
+        } else if selectionMentalCare == "afterchat" {
+            AfterChatView()
         } else if selectionMentalCare == "mainview" {
             MainView()
         } else {
@@ -46,21 +46,21 @@ struct MeditationView: View {
                         Spacer()
                         Button(action: {
                             selectionMentalCare = "mainview"
-                            SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                            VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                         }) {
                             Image("icClose")
                         }
                         .padding(.trailing, 27)
                     }
                     .foregroundColor(.white)
-//                    .padding(.top, 61 - topPadding)
+                    .padding(.top, 60)
                     
 //                    Spacer()
                     
                     Text("⏱ 05:00")
                         .foregroundColor(.white)
                         .font(Font.custom("GujaratiMT", size: 40))
-                        .padding(.top, 50)
+                        .padding(.top, 88)
                         .padding(.bottom, 50)
                     Text("""
                         5분간 명상을 하면
@@ -85,9 +85,10 @@ struct MeditationView: View {
                     Button(action: {
                         backgroundColor = .white
                         foregroundColor = .black
-                        selectionMentalCare = "report"
-                        SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                        selectionMentalCare = "afterchat"
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                         chatbotPlayer.pause()
+                        SharedRepo.sharedVariables.meditationDone = true
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                             withAnimation(.easeIn(duration: 1.0)) {
@@ -106,13 +107,14 @@ struct MeditationView: View {
                     .cornerRadius(17)
                     .overlay(
                         RoundedRectangle(cornerRadius: 17)
-                            .stroke(Color.white, lineWidth: 1)
+                            .stroke(Color(red: 153 / 255, green: 153 / 255, blue: 154 / 255), lineWidth: 1)
                     )
                     .multilineTextAlignment(.center)
+                    .offset(y: -36)
                 }
-                .edgesIgnoringSafeArea(.bottom)
                 .padding(.bottom, 36 - bottomPadding)
             }
+            .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
                 chatbotPlayer.play()
             })

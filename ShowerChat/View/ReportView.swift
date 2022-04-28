@@ -11,7 +11,7 @@ import AVKit
 struct ReportView: View {
     var player = AVPlayer(url:  Bundle.main.url(forResource: "Meditation_Report_Background", withExtension: "mp4")!)
     @State private var foregroundColor = Color.white
-    @State private var backgroundColor = Color.black.opacity(0.3)
+    @State private var backgroundColor = Color.black.opacity(0.2)
     @State private var selectionMentalCare: String?
     
 //    let topPadding = UIApplication.shared.keyWindow!.safeAreaInsets.top
@@ -44,7 +44,7 @@ struct ReportView: View {
                         Spacer()
                         Button(action: {
                             selectionMentalCare = "mainview"
-                            SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                            VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                         }) {
                             Image("icClose")
                         }
@@ -73,7 +73,7 @@ struct ReportView: View {
                         backgroundColor = .white
                         foregroundColor = .black
                         selectionMentalCare = "reportDetail"
-                        SharedRepo.sharedVariables.mentalVideoPlayer.queuePlayer.pause()
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.pause()
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                             withAnimation(.easeIn(duration: 1.0)) {
@@ -92,7 +92,7 @@ struct ReportView: View {
                     .cornerRadius(17)
                     .overlay(
                         RoundedRectangle(cornerRadius: 17)
-                            .stroke(Color.white, lineWidth: 1)
+                            .stroke(Color(red: 153 / 255, green: 153 / 255, blue: 154 / 255), lineWidth: 1)
                     )
                     .multilineTextAlignment(.center)
                 }

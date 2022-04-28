@@ -11,7 +11,7 @@ import SwiftUI
 struct ShowerChatApp: App {
     var body: some Scene {
         WindowGroup {
-            ChatScreen()
+            ChatScreen().environmentObject(Connection())
         }
     }
 }

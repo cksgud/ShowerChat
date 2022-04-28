@@ -15,6 +15,9 @@ struct ChatScreen: View {
     let chatBotAnswerData = ChatBotAnswerData.all()
     let userResponseData = UserResponseData.all()
     
+    @EnvironmentObject private var clientSocket: Connection
+    @State private var isPresented = true
+    
     var body: some View {
         ZStack {
             VideoPlayer(player: player)
@@ -24,50 +27,28 @@ struct ChatScreen: View {
                 .onChange(of: sharedVariables.isPlayOn, perform: { isPlayOn in
                     isPlayOn ? player.play() : player.pause()
                 })
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
             
             VStack {
                 Spacer()
                 
-                HStack {
-                    CircleButton(buttonImage: "music.note")
-                    Spacer()
-                }
-                
-                HStack {
-                    CircleButton(buttonImage: "music.note")
-                    Spacer()
-                }
-                .offset(y:-25)
-                
-                Spacer()
-                Spacer()
-                
                 VStack {
                     if sharedVariables.usrRspBtnVisible {
-                        ChatBotAnswerTextView(chatBotAnswerData: chatBotAnswerData[sharedVariables.ansNum])
-                    } else {
-                        ChatBotAnswerTextView(chatBotAnswerData: chatBotAnswerData[sharedVariables.ansNum]).hidden()
+                        TestTextView(answer: sharedVariables.responses.count > 0 ? sharedVariables.responses[0] : chatBotAnswerData[sharedVariables.ansNum].answer)
                     }
-                    
-                    Divider()
-                    
+
                     HStack {
-                        ForEach(self.userResponseData, id:\.response ) { userResponseData in
-                            if sharedVariables.usrRspBtnVisible {
-                                UserResponseButton(userResponseData: userResponseData)
-                            } else {
-                                UserResponseButton(userResponseData: userResponseData).hidden()
-                            }
+                        if sharedVariables.usrRspBtnVisible {
+                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[1] : userResponseData[sharedVariables.btnNum1].response)
+                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[2] : userResponseData[sharedVariables.btnNum2].response)
+                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[3] : userResponseData[sharedVariables.btnNum3].response)
                         }
                     }
                 }
             }
         }
-    }
-}
-
-struct ChatScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatScreen()
+        .onAppear(perform: {
+            clientSocket.connect(ip: "192.168.10.102", port: 8000)
+        })
     }
 }

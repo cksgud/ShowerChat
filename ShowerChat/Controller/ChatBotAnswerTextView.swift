@@ -11,7 +11,7 @@ struct ChatBotAnswerTextView: View {
     let chatBotAnswerData: ChatBotAnswerData
     
     var body: some View {
-        Text(chatBotAnswerData.answer)
+        Text(SharedRepo.sharedVariables.responses.count > 0 ? SharedRepo.sharedVariables.responses[0] : chatBotAnswerData.answer)
         .foregroundColor(.white)
         .font(.title)
         .multilineTextAlignment(.center)

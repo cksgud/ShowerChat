@@ -1,16 +1,25 @@
 PODS:
   - DropDown (2.3.13)
+  - HaishinKit (1.2.1):
+    - Logboard (~> 2.2.2)
+  - Logboard (2.2.2)
 
 DEPENDENCIES:
   - DropDown
+  - HaishinKit (~> 1.2.0)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HaishinKit
+    - Logboard
   trunk:
     - DropDown
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  HaishinKit: 2b924f6ce90483e373f7079de90b2496fea30241
+  Logboard: 0ab6bbd984ed032b3f0b615cef06779a73445c80
 
-PODFILE CHECKSUM: 21c0a55065130f5fb9b8ec1b593555f125bf86f1
+PODFILE CHECKSUM: 446729409dea559365842b1da7a0d555bb21ba7b
 
 COCOAPODS: 1.11.2

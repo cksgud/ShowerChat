@@ -43,10 +43,17 @@ struct ChatScreen: View {
                             .frame(width:38, height: 38)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .padding(.leading, 24)
+                        #if Melissa
                         Text("Melissa")
                             .font(Font.custom("AppleSDGothicNeo-Bold", size: 22))
                             .padding(.leading, 12)
                             .foregroundColor(.white)
+                        #else
+                        Text("Judy")
+                            .font(Font.custom("AppleSDGothicNeo-Bold", size: 22))
+                            .padding(.leading, 12)
+                            .foregroundColor(.white)
+                        #endif
                         Spacer()
                         Button(action: {
                             selectionMentalCare = "mainview"

@@ -11,6 +11,20 @@
 		5622C064271BC449001CFCAC /* mentalcare_01_06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5622C063271BC449001CFCAC /* mentalcare_01_06.mp4 */; };
 		5622C067271BC485001CFCAC /* ButtonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622C066271BC485001CFCAC /* ButtonAPI.swift */; };
 		5622C069271BC492001CFCAC /* ResponseButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622C068271BC492001CFCAC /* ResponseButtonText.swift */; };
+		56392BA9272036BF00FE27ED /* mentalcare_02_13_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392B9C272036AE00FE27ED /* mentalcare_02_13_result.mp4 */; };
+		56392BAA272036BF00FE27ED /* mentalcare_02_08_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392B9D272036B000FE27ED /* mentalcare_02_08_result.mp4 */; };
+		56392BAB272036BF00FE27ED /* mentalcare_02_04_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392B9E272036B100FE27ED /* mentalcare_02_04_result.mp4 */; };
+		56392BAC272036BF00FE27ED /* mentalcare_02_07_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392B9F272036B200FE27ED /* mentalcare_02_07_result.mp4 */; };
+		56392BAD272036BF00FE27ED /* mentalcare_02_11_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA0272036B300FE27ED /* mentalcare_02_11_result.mp4 */; };
+		56392BAE272036BF00FE27ED /* mentalcare_02_10_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA1272036B500FE27ED /* mentalcare_02_10_result.mp4 */; };
+		56392BAF272036BF00FE27ED /* mentalcare_02_05_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA2272036B600FE27ED /* mentalcare_02_05_result.mp4 */; };
+		56392BB0272036BF00FE27ED /* mentalcare_02_01_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA3272036B700FE27ED /* mentalcare_02_01_result.mp4 */; };
+		56392BB1272036BF00FE27ED /* mentalcare_02_02_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA4272036B900FE27ED /* mentalcare_02_02_result.mp4 */; };
+		56392BB2272036BF00FE27ED /* mentalcare_02_03_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA5272036BA00FE27ED /* mentalcare_02_03_result.mp4 */; };
+		56392BB3272036BF00FE27ED /* mentalcare_02_12_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA6272036BC00FE27ED /* mentalcare_02_12_result.mp4 */; };
+		56392BB4272036BF00FE27ED /* mentalcare_02_06_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA7272036BD00FE27ED /* mentalcare_02_06_result.mp4 */; };
+		56392BB5272036BF00FE27ED /* mentalcare_02_09_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BA8272036BF00FE27ED /* mentalcare_02_09_result.mp4 */; };
+		56392BB727203F6A00FE27ED /* mentalcare_idle_result.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56392BB627203F6A00FE27ED /* mentalcare_idle_result.mp4 */; };
 		564F59E527141CDC00E07E8E /* VideoControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */; };
 		564F59F827141D6A00E07E8E /* mentalcare_01_14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */; };
 		564F5A1027152DF900E07E8E /* mentalcare_01_09.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 564F5A0327152DD500E07E8E /* mentalcare_01_09.mp4 */; };
@@ -40,6 +54,12 @@
 		5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5678237426E0EB3700706CDE /* Preview Assets.xcassets */; };
 		5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5678238626E0EB8100706CDE /* ChatScreen.swift */; };
 		567A4D3D26EB3FA40034A00C /* TouchMeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A4D3C26EB3FA40034A00C /* TouchMeButtonStyle.swift */; };
+		568394FD27295F3D00C23DFC /* PopupModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568394FB27295F3B00C23DFC /* PopupModifier.swift */; };
+		568394FE27295F3D00C23DFC /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568394FC27295F3D00C23DFC /* View+CornerRadius.swift */; };
+		5683950127295FBA00C23DFC /* LiveChatPopupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568394FF27295FB800C23DFC /* LiveChatPopupContentView.swift */; };
+		5683950227295FBA00C23DFC /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5683950027295FBA00C23DFC /* PopupView.swift */; };
+		5683950427296B5400C23DFC /* LiveVideoControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5683950327296B5400C23DFC /* LiveVideoControllerAPI.swift */; };
+		56839508272995A300C23DFC /* LiveVideoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56839507272995A300C23DFC /* LiveVideoTestView.swift */; };
 		569CA1F1270EC4EC00C026C3 /* Meditation_Report_Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F0270EC4EC00C026C3 /* Meditation_Report_Background.mp4 */; };
 		569CA1F3270ED09500C026C3 /* SignPainter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F2270ED09500C026C3 /* SignPainter.ttc */; };
 		569CA1F5270ED0C100C026C3 /* HelveticaNeue.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 569CA1F4270ED0C100C026C3 /* HelveticaNeue.ttc */; };
@@ -79,6 +99,20 @@
 		5622C063271BC449001CFCAC /* mentalcare_01_06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_06.mp4; sourceTree = "<group>"; };
 		5622C066271BC485001CFCAC /* ButtonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAPI.swift; sourceTree = "<group>"; };
 		5622C068271BC492001CFCAC /* ResponseButtonText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseButtonText.swift; sourceTree = "<group>"; };
+		56392B9C272036AE00FE27ED /* mentalcare_02_13_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_13_result.mp4; sourceTree = "<group>"; };
+		56392B9D272036B000FE27ED /* mentalcare_02_08_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_08_result.mp4; sourceTree = "<group>"; };
+		56392B9E272036B100FE27ED /* mentalcare_02_04_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_04_result.mp4; sourceTree = "<group>"; };
+		56392B9F272036B200FE27ED /* mentalcare_02_07_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_07_result.mp4; sourceTree = "<group>"; };
+		56392BA0272036B300FE27ED /* mentalcare_02_11_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_11_result.mp4; sourceTree = "<group>"; };
+		56392BA1272036B500FE27ED /* mentalcare_02_10_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_10_result.mp4; sourceTree = "<group>"; };
+		56392BA2272036B600FE27ED /* mentalcare_02_05_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_05_result.mp4; sourceTree = "<group>"; };
+		56392BA3272036B700FE27ED /* mentalcare_02_01_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_01_result.mp4; sourceTree = "<group>"; };
+		56392BA4272036B900FE27ED /* mentalcare_02_02_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_02_result.mp4; sourceTree = "<group>"; };
+		56392BA5272036BA00FE27ED /* mentalcare_02_03_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_03_result.mp4; sourceTree = "<group>"; };
+		56392BA6272036BC00FE27ED /* mentalcare_02_12_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_12_result.mp4; sourceTree = "<group>"; };
+		56392BA7272036BD00FE27ED /* mentalcare_02_06_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_06_result.mp4; sourceTree = "<group>"; };
+		56392BA8272036BF00FE27ED /* mentalcare_02_09_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_02_09_result.mp4; sourceTree = "<group>"; };
+		56392BB627203F6A00FE27ED /* mentalcare_idle_result.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_idle_result.mp4; sourceTree = "<group>"; };
 		564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoControllerAPI.swift; sourceTree = "<group>"; };
 		564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_14.mp4; sourceTree = "<group>"; };
 		564F5A0327152DD500E07E8E /* mentalcare_01_09.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalcare_01_09.mp4; sourceTree = "<group>"; };
@@ -110,6 +144,12 @@
 		5678237626E0EB3700706CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5678238626E0EB8100706CDE /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		567A4D3C26EB3FA40034A00C /* TouchMeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMeButtonStyle.swift; sourceTree = "<group>"; };
+		568394FB27295F3B00C23DFC /* PopupModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupModifier.swift; sourceTree = "<group>"; };
+		568394FC27295F3D00C23DFC /* View+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		568394FF27295FB800C23DFC /* LiveChatPopupContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveChatPopupContentView.swift; sourceTree = "<group>"; };
+		5683950027295FBA00C23DFC /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		5683950327296B5400C23DFC /* LiveVideoControllerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVideoControllerAPI.swift; sourceTree = "<group>"; };
+		56839507272995A300C23DFC /* LiveVideoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVideoTestView.swift; sourceTree = "<group>"; };
 		569CA1F0270EC4EC00C026C3 /* Meditation_Report_Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meditation_Report_Background.mp4; sourceTree = "<group>"; };
 		569CA1F2270ED09500C026C3 /* SignPainter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttc; sourceTree = "<group>"; };
 		569CA1F4270ED0C100C026C3 /* HelveticaNeue.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttc; sourceTree = "<group>"; };
@@ -164,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				564F59E427141CDC00E07E8E /* VideoControllerAPI.swift */,
+				5683950327296B5400C23DFC /* LiveVideoControllerAPI.swift */,
 				5622C066271BC485001CFCAC /* ButtonAPI.swift */,
 			);
 			path = API;
@@ -187,6 +228,20 @@
 				564F5A0527152DDC00E07E8E /* mentalcare_01_13.mp4 */,
 				564F59EA27141D2900E07E8E /* mentalcare_01_14.mp4 */,
 				56D00068271BF891005C60D9 /* mentalcare_idle.mp4 */,
+				56392BA3272036B700FE27ED /* mentalcare_02_01_result.mp4 */,
+				56392BA4272036B900FE27ED /* mentalcare_02_02_result.mp4 */,
+				56392BA5272036BA00FE27ED /* mentalcare_02_03_result.mp4 */,
+				56392B9E272036B100FE27ED /* mentalcare_02_04_result.mp4 */,
+				56392BA2272036B600FE27ED /* mentalcare_02_05_result.mp4 */,
+				56392BA7272036BD00FE27ED /* mentalcare_02_06_result.mp4 */,
+				56392B9F272036B200FE27ED /* mentalcare_02_07_result.mp4 */,
+				56392B9D272036B000FE27ED /* mentalcare_02_08_result.mp4 */,
+				56392BA8272036BF00FE27ED /* mentalcare_02_09_result.mp4 */,
+				56392BA1272036B500FE27ED /* mentalcare_02_10_result.mp4 */,
+				56392BA0272036B300FE27ED /* mentalcare_02_11_result.mp4 */,
+				56392BA6272036BC00FE27ED /* mentalcare_02_12_result.mp4 */,
+				56392B9C272036AE00FE27ED /* mentalcare_02_13_result.mp4 */,
+				56392BB627203F6A00FE27ED /* mentalcare_idle_result.mp4 */,
 			);
 			path = MentalVideos;
 			sourceTree = "<group>";
@@ -239,6 +294,7 @@
 		5678237D26E0EB4C00706CDE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				568394FA27295F2B00C23DFC /* CustomPopUp */,
 				56638CD3271FABB50092872C /* ChatBubble.swift */,
 				56B8855A271EE41700B52221 /* LiveChatUserTextField.swift */,
 				56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */,
@@ -268,11 +324,14 @@
 				56C2027E270462770051FFFD /* MeditationView.swift */,
 				56C202C427059B400051FFFD /* ReportView.swift */,
 				56C202C727059B800051FFFD /* MainView.swift */,
+				5683950027295FBA00C23DFC /* PopupView.swift */,
+				568394FF27295FB800C23DFC /* LiveChatPopupContentView.swift */,
 				56C202CA27059BB00051FFFD /* ReportDetailView.swift */,
 				564FBD27270D49A30043E4F9 /* DiaryView.swift */,
 				564FBD35270D9E5F0043E4F9 /* LetterView.swift */,
 				564FBD37270D9E810043E4F9 /* AudioView.swift */,
 				56D7C964271D43DD001A6BF9 /* AfterChatView.swift */,
+				56839507272995A300C23DFC /* LiveVideoTestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +355,15 @@
 				56C2020226FDD8360051FFFD /* Bluebird_BumyGoldson.mp3 */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		568394FA27295F2B00C23DFC /* CustomPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				568394FB27295F3B00C23DFC /* PopupModifier.swift */,
+				568394FC27295F3D00C23DFC /* View+CornerRadius.swift */,
+			);
+			path = CustomPopUp;
 			sourceTree = "<group>";
 		};
 		56C20242270317820051FFFD /* Fonts */ = {
@@ -399,25 +467,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56392BAE272036BF00FE27ED /* mentalcare_02_10_result.mp4 in Resources */,
 				56C20275270458B30051FFFD /* AppleSDGothicNeo.ttc in Resources */,
 				564F5A1427152DF900E07E8E /* mentalcare_01_12.mp4 in Resources */,
+				56392BB0272036BF00FE27ED /* mentalcare_02_01_result.mp4 in Resources */,
 				564F5A1B27152DF900E07E8E /* mentalcare_01_11.mp4 in Resources */,
 				5678237526E0EB3700706CDE /* Preview Assets.xcassets in Resources */,
 				564F5A1927152DF900E07E8E /* mentalcare_01_03.mp4 in Resources */,
 				564F5A1527152DF900E07E8E /* mentalcare_01_01.mp4 in Resources */,
+				56392BB2272036BF00FE27ED /* mentalcare_02_03_result.mp4 in Resources */,
 				564F5A1227152DF900E07E8E /* mentalcare_01_13.mp4 in Resources */,
 				564F5A1A27152DF900E07E8E /* mentalcare_01_08.mp4 in Resources */,
+				56392BB5272036BF00FE27ED /* mentalcare_02_09_result.mp4 in Resources */,
 				569CA1F1270EC4EC00C026C3 /* Meditation_Report_Background.mp4 in Resources */,
 				564F5A1027152DF900E07E8E /* mentalcare_01_09.mp4 in Resources */,
 				569CA1F7270EDF6A00C026C3 /* LaunchScreen.storyboard in Resources */,
+				56392BAC272036BF00FE27ED /* mentalcare_02_07_result.mp4 in Resources */,
+				56392BAA272036BF00FE27ED /* mentalcare_02_08_result.mp4 in Resources */,
 				5678237226E0EB3700706CDE /* Assets.xcassets in Resources */,
+				56392BB1272036BF00FE27ED /* mentalcare_02_02_result.mp4 in Resources */,
+				56392BAD272036BF00FE27ED /* mentalcare_02_11_result.mp4 in Resources */,
 				5622C064271BC449001CFCAC /* mentalcare_01_06.mp4 in Resources */,
 				564F5A1627152DF900E07E8E /* mentalcare_01_05.mp4 in Resources */,
+				56392BA9272036BF00FE27ED /* mentalcare_02_13_result.mp4 in Resources */,
 				56C2020426FDD8370051FFFD /* Bluebird_BumyGoldson.mp3 in Resources */,
+				56392BB727203F6A00FE27ED /* mentalcare_idle_result.mp4 in Resources */,
+				56392BB3272036BF00FE27ED /* mentalcare_02_12_result.mp4 in Resources */,
 				564F5A1727152DF900E07E8E /* mentalcare_01_02.mp4 in Resources */,
 				569CA1F5270ED0C100C026C3 /* HelveticaNeue.ttc in Resources */,
 				569CA1F3270ED09500C026C3 /* SignPainter.ttc in Resources */,
+				56392BB4272036BF00FE27ED /* mentalcare_02_06_result.mp4 in Resources */,
+				56392BAB272036BF00FE27ED /* mentalcare_02_04_result.mp4 in Resources */,
 				564F5A1C27152DF900E07E8E /* mentalcare_01_04.mp4 in Resources */,
+				56392BAF272036BF00FE27ED /* mentalcare_02_05_result.mp4 in Resources */,
 				56D00069271BF891005C60D9 /* mentalcare_idle.mp4 in Resources */,
 				564F59F827141D6A00E07E8E /* mentalcare_01_14.mp4 in Resources */,
 				56C202722704580C0051FFFD /* Apple Chancery.ttf in Resources */,
@@ -478,12 +560,14 @@
 			files = (
 				56B8855B271EE41700B52221 /* LiveChatUserTextField.swift in Sources */,
 				56638CD4271FABB50092872C /* ChatBubble.swift in Sources */,
+				568394FD27295F3D00C23DFC /* PopupModifier.swift in Sources */,
 				564FBD30270D8D7C0043E4F9 /* MainMissionButton.swift in Sources */,
 				56C202262702B6C80051FFFD /* MusicPlayer.swift in Sources */,
 				56C202CB27059BB00051FFFD /* ReportDetailView.swift in Sources */,
 				56C202C827059B800051FFFD /* MainView.swift in Sources */,
 				564FBD36270D9E5F0043E4F9 /* LetterView.swift in Sources */,
 				56EFF0F026E44D4B00E643DD /* UserResponseButtonHorizontal.swift in Sources */,
+				5683950427296B5400C23DFC /* LiveVideoControllerAPI.swift in Sources */,
 				56C2027F270462770051FFFD /* MeditationView.swift in Sources */,
 				564FBD28270D49A30043E4F9 /* DiaryView.swift in Sources */,
 				56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */,
@@ -501,9 +585,11 @@
 				56D7C965271D43DD001A6BF9 /* AfterChatView.swift in Sources */,
 				56EFF0F326E44D9600E643DD /* UserResponseData.swift in Sources */,
 				56C202D92705E2210051FFFD /* WebSocket.swift in Sources */,
+				5683950127295FBA00C23DFC /* LiveChatPopupContentView.swift in Sources */,
 				56C2025B270433D70051FFFD /* MusicButton.swift in Sources */,
 				56FA221826E89A4500A830B8 /* Socket.swift in Sources */,
 				564FBD2C270D4D9E0043E4F9 /* MainProfile.swift in Sources */,
+				56839508272995A300C23DFC /* LiveVideoTestView.swift in Sources */,
 				56D0F90B26FC728A00686C96 /* ProfileData.swift in Sources */,
 				564FBD34270D96600043E4F9 /* MainMissionText.swift in Sources */,
 				56BBD26C26E4A9B500FB8AE6 /* SharedRepo.swift in Sources */,
@@ -514,6 +600,8 @@
 				56FA221B26E89CBD00A830B8 /* Connection.swift in Sources */,
 				56638CD6271FE1D80092872C /* WeekDaysData.swift in Sources */,
 				56EFF0F926E456B100E643DD /* ChatBotAnswerData.swift in Sources */,
+				5683950227295FBA00C23DFC /* PopupView.swift in Sources */,
+				568394FE27295F3D00C23DFC /* View+CornerRadius.swift in Sources */,
 				56C202C527059B400051FFFD /* ReportView.swift in Sources */,
 				5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */,
 			);
@@ -646,6 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShowerChat/Preview Content\"";
 				DEVELOPMENT_TEAM = V4GBG4VKR4;
 				ENABLE_PREVIEWS = YES;
@@ -655,8 +744,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
-				OTHER_SWIFT_FLAGS = "-DPROTOCOL_LOCAL";
+				MARKETING_VERSION = 1.2.0;
+				OTHER_SWIFT_FLAGS = "-DPROTOCOL_LOCAL -DMelissa";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByeBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = BYE_BLUE_DEV_2022;
@@ -673,6 +762,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShowerChat/Preview Content\"";
 				DEVELOPMENT_TEAM = V4GBG4VKR4;
 				ENABLE_PREVIEWS = YES;
@@ -682,7 +772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.2.0;
 				OTHER_SWIFT_FLAGS = "-DPROTOCOL_LOCAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByeBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";

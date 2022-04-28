@@ -10,12 +10,15 @@ import DropDown
 
 struct MainView: View {
     @State private var missionSelected: String?
+    @State var isPresented = false
+    @State var text = ""
     
     var body: some View {
         if missionSelected == "chatscreen" {
             ChatScreen().environmentObject(Connection())
         } else if missionSelected == "livechat" {
-            LiveChatView(liveChattingText: [String]())
+//            LiveChatView(liveChattingText: [String]())
+            LiveChatView(liveChattingText: [String](), ip_address: $text)
         } else if missionSelected == "diary" {
             DiaryView().environmentObject(Connection())
         } else if missionSelected == "letter" {
@@ -28,13 +31,21 @@ struct MainView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        missionSelected = "livechat"
+//                        missionSelected = "livechat"
+                        isPresented = true
                     }) {
                         Image("icPlus")
                     }
                     .padding(.leading, 24)
                     
                     Spacer()
+                    
+//                    Button(action: {
+//
+//                    }) {
+//                        Image(systemName: "video.fill")
+//                            .foregroundColor(Color.black)
+//                    }
                     
                     Button(action: {
                         
@@ -60,8 +71,13 @@ struct MainView: View {
                 }
                 .offset(x: 15)
                 
+                #if Melissa
                 Text("상담사 Melissa와 매칭되었습니다.").font(Font.custom("AppleSDGothicNeo-UltraLight", size: 13))
                     .padding(.bottom, 35)
+                #else
+                Text("상담사 Judy와 매칭되었습니다.").font(Font.custom("AppleSDGothicNeo-UltraLight", size: 13))
+                    .padding(.bottom, 35)
+                #endif
                 
                 HStack {
                     Spacer()
@@ -87,9 +103,6 @@ struct MainView: View {
                 
                 ScrollView {
                     Spacer().frame(width: 0, height: 2)
-                    Image("graphReports")
-                        .resizable()
-                        .frame(width: 375, height: 211)
 
                     VStack {
                         HStack {
@@ -129,6 +142,11 @@ struct MainView: View {
             }
             .padding(.top, 50)
             .ignoresSafeArea(edges: .all)
+            .popup(isPresented: $isPresented) {
+                PopupView {
+                    LiveChatPopupContentView(isPresented: $isPresented, text: $text, moveToScreen: $missionSelected)
+                }
+            }
         }
     }
 }

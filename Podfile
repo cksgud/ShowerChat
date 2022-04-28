@@ -3,8 +3,15 @@
 
 target 'ShowerChat' do
   # Comment the next line if you don't want to use dynamic frameworks
+  source 'https://github.com/CocoaPods/Specs.git'
   use_frameworks!
+
+  def import_pods
+      pod 'HaishinKit', '~> 1.2.0'
+  end
 
   # Pods for ShowerChat
   pod 'DropDown'
+  platform :ios, '9.0'
+  import_pods
 end

@@ -14,7 +14,7 @@ struct LiveChatUserTextField: View {
         HStack {
             VStack {
                 HStack {
-                    Text("채팅상담 (실시간 영상 교체 예정)")
+                    Text("초대코드 : \(SharedRepo.sharedVariables.liveInvitationCode)")
                         .foregroundColor(.black).opacity(0.5)
                         .font(Font.custom("AppleSDGothicNeo-Medium", size: 12))
                         .padding(.top, 10)

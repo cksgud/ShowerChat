@@ -19,9 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>블루투스 접근 필요</string>
+	<key>NSCameraUsageDescription</key>
+	<string>카메라 접근 필요</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>마이크로폰 접근 필요</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AppleSDGothicNeo.ttc</string>

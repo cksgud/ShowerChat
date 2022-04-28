@@ -11,7 +11,7 @@ import AVFoundation
 
 #if PROTOCOL_LOCAL
 let time_delay_insert = 1.1
-let time_delay_play = 1.5
+let time_delay_play = 1.7
 #else
 let time_delay_insert = 2.0
 let time_delay_play = 2.5
@@ -37,6 +37,7 @@ struct SmartVideoPlayer: UIViewRepresentable {
         if goNext {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time_delay_insert) {
                 print("SharedRepo.sharedVariables.chatbot = ", SharedRepo.sharedVariables.chatbot)
+                #if Melissa
                 if !SharedRepo.sharedVariables.chatbot.isEmpty {
                     if SharedRepo.sharedVariables.chatbot[0].contains("안녕하세요") {
                         VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_01_01", withExtension: "mp4")!), after: nil)
@@ -70,6 +71,41 @@ struct SmartVideoPlayer: UIViewRepresentable {
                 } else {
                     VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_idle", withExtension: "mp4")!), after: nil)
                 }
+                #else
+                if !SharedRepo.sharedVariables.chatbot.isEmpty {
+                    if SharedRepo.sharedVariables.chatbot[0].contains("안녕? 난 Judy 야") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_01_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("기분이 우울했구나") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_02_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("기분 좋게 해줄 음악이 있는데") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_03_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("음악을 듣고 나니 어때?") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_04_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("혹시 감정 날씨🌤라고 들어본 적 있어?") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_05_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("우리 감정도 날씨와 비슷한 것 같아.") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_06_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("오늘처럼 우울할 때,") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_07_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("친한 친구와 좋았던 기억을") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_08_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("그래~ 네가 가진 소중한 것들을 잊지 마") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_09_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("어린왕자📒 책 중에") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_10_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("우울한 기분이 들면") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_11_result", withExtension: "mp4")!), after: nil)
+                    }  else if SharedRepo.sharedVariables.chatbot[0].contains("기분 이제 괜찮아?") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_12_result", withExtension: "mp4")!), after: nil)
+                    } else if SharedRepo.sharedVariables.chatbot[0].contains("다행이야~ 그럼 우리 같이") {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_13_result", withExtension: "mp4")!), after: nil)
+                    } else {
+                        VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_idle_result", withExtension: "mp4")!), after: nil)
+                    }
+                } else {
+                    VideoRepo.sharedVideos.smartVideoPlayer.queuePlayer.insert(AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_idle_result", withExtension: "mp4")!), after: nil)
+                }
+                #endif
             }
         }
     }
@@ -83,9 +119,15 @@ class SmartPlayerUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        #if Melissa
         let mentalVideos : [AVPlayerItem] = [
             AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_01_01", withExtension: "mp4")!),
         ]
+        #else
+        let mentalVideos : [AVPlayerItem] = [
+            AVPlayerItem(url:  Bundle.main.url(forResource: "mentalcare_02_01_result", withExtension: "mp4")!),
+        ]
+        #endif
         
         queuePlayer = AVQueuePlayer(items: mentalVideos)
         playerLayer.player = queuePlayer

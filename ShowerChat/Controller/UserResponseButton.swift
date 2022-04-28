@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct UserResponseButton: View {
-    let response: String
+    let userResponseData: UserResponseData
     
     var body: some View {
         Button(action: {
-            PlayRepo.playShared.isPlayOn = !PlayRepo.playShared.isPlayOn
+            SharedRepo.sharedVariables.usrRspBtnVisible.toggle()
+            SharedRepo.sharedVariables.ansNum += 1
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                SharedRepo.sharedVariables.usrRspBtnVisible.toggle()
+            }
         }) {
-            Text(response).font(.body)
+            Text(userResponseData.response).font(.body)
         }
         .foregroundColor(.white)
         .padding(.all)

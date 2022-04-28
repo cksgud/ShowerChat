@@ -10,10 +10,10 @@ import AVKit
 
 struct ChatScreen: View {
     var player = AVPlayer(url:  Bundle.main.url(forResource: "mentalCareVideo", withExtension: "MP4")!)
-    @ObservedObject var playShared = PlayRepo.playShared
+    @ObservedObject var sharedVariables = SharedRepo.sharedVariables
     
-    let chatBotAnswerMakers = ChatBotAnswerMaker.all()
-    let userResponseMakers = UserResponseMaker.all()
+    let chatBotAnswerData = ChatBotAnswerData.all()
+    let userResponseData = UserResponseData.all()
     
     var body: some View {
         ZStack {
@@ -21,38 +21,44 @@ struct ChatScreen: View {
                 .onAppear() {
                     player.play()
                 }
-                .onChange(of: playShared.isPlayOn, perform: { isPlayOn in
+                .onChange(of: sharedVariables.isPlayOn, perform: { isPlayOn in
                     isPlayOn ? player.play() : player.pause()
                 })
             
             VStack {
                 Spacer()
                 
-                VStack {
-                    HStack {
-                        CircleButton(buttonImage: "music.note")
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        CircleButton(buttonImage: "music.note")
-                        Spacer()
-                    }
-                    .offset(y:-25)
+                HStack {
+                    CircleButton(buttonImage: "music.note")
+                    Spacer()
                 }
                 
+                HStack {
+                    CircleButton(buttonImage: "music.note")
+                    Spacer()
+                }
+                .offset(y:-25)
+                
                 Spacer()
                 Spacer()
                 
                 VStack {
-                    ChatBotAnswerTextView(answer: chatBotAnswerMakers[0].answer)
+                    if sharedVariables.usrRspBtnVisible {
+                        ChatBotAnswerTextView(chatBotAnswerData: chatBotAnswerData[sharedVariables.ansNum])
+                    } else {
+                        ChatBotAnswerTextView(chatBotAnswerData: chatBotAnswerData[sharedVariables.ansNum]).hidden()
+                    }
                     
                     Divider()
                     
                     HStack {
-                        UserResponseButton(response: userResponseMakers[0].response)
-                        UserResponseButton(response: userResponseMakers[1].response)
-                        UserResponseButton(response: userResponseMakers[2].response)
+                        ForEach(self.userResponseData, id:\.response ) { userResponseData in
+                            if sharedVariables.usrRspBtnVisible {
+                                UserResponseButton(userResponseData: userResponseData)
+                            } else {
+                                UserResponseButton(userResponseData: userResponseData).hidden()
+                            }
+                        }
                     }
                 }
             }

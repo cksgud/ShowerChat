@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ChatBotAnswerTextView: View {
-    let answer: String
+    let chatBotAnswerData: ChatBotAnswerData
     
     var body: some View {
-       Text(answer)
+        Text(chatBotAnswerData.answer)
         .foregroundColor(.white)
         .font(.title)
         .multilineTextAlignment(.center)

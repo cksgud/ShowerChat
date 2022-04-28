@@ -13,12 +13,12 @@
 		5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5678238626E0EB8100706CDE /* ChatScreen.swift */; };
 		567823B326E1C94F00706CDE /* KoreaFlag.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 567823B126E1C94F00706CDE /* KoreaFlag.MP4 */; };
 		567823B426E1C94F00706CDE /* Effect1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 567823B226E1C94F00706CDE /* Effect1.gif */; };
-		56BBD26C26E4A9B500FB8AE6 /* PlayRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */; };
+		56BBD26C26E4A9B500FB8AE6 /* SharedRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBD26B26E4A9B500FB8AE6 /* SharedRepo.swift */; };
 		56EFF0EC26E24F6A00E643DD /* mentalCareVideo.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 56EFF0EB26E24F6A00E643DD /* mentalCareVideo.MP4 */; };
 		56EFF0F026E44D4B00E643DD /* UserResponseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */; };
-		56EFF0F326E44D9600E643DD /* UserResponseMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */; };
+		56EFF0F326E44D9600E643DD /* UserResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F226E44D9600E643DD /* UserResponseData.swift */; };
 		56EFF0F626E455C800E643DD /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F526E455C800E643DD /* CircleButton.swift */; };
-		56EFF0F926E456B100E643DD /* ChatBotAnswerMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */; };
+		56EFF0F926E456B100E643DD /* ChatBotAnswerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */; };
 		56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +31,12 @@
 		5678238626E0EB8100706CDE /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		567823B126E1C94F00706CDE /* KoreaFlag.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KoreaFlag.MP4; sourceTree = "<group>"; };
 		567823B226E1C94F00706CDE /* Effect1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Effect1.gif; sourceTree = "<group>"; };
-		56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRepo.swift; sourceTree = "<group>"; };
+		56BBD26B26E4A9B500FB8AE6 /* SharedRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRepo.swift; sourceTree = "<group>"; };
 		56EFF0EB26E24F6A00E643DD /* mentalCareVideo.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mentalCareVideo.MP4; sourceTree = "<group>"; };
 		56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseButton.swift; sourceTree = "<group>"; };
-		56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseMaker.swift; sourceTree = "<group>"; };
+		56EFF0F226E44D9600E643DD /* UserResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseData.swift; sourceTree = "<group>"; };
 		56EFF0F526E455C800E643DD /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
-		56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerMaker.swift; sourceTree = "<group>"; };
+		56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerData.swift; sourceTree = "<group>"; };
 		56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAnswerTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				56EFF0FC26E4579A00E643DD /* ChatBotAnswerTextView.swift */,
-				56BBD26B26E4A9B500FB8AE6 /* PlayRepo.swift */,
 				56EFF0EF26E44D4B00E643DD /* UserResponseButton.swift */,
 				56EFF0F526E455C800E643DD /* CircleButton.swift */,
+				56BBD26B26E4A9B500FB8AE6 /* SharedRepo.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,8 +112,8 @@
 		5678237F26E0EB5B00706CDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				56EFF0F226E44D9600E643DD /* UserResponseMaker.swift */,
-				56EFF0F826E456B100E643DD /* ChatBotAnswerMaker.swift */,
+				56EFF0F226E44D9600E643DD /* UserResponseData.swift */,
+				56EFF0F826E456B100E643DD /* ChatBotAnswerData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,9 +204,9 @@
 				56EFF0FD26E4579A00E643DD /* ChatBotAnswerTextView.swift in Sources */,
 				56EFF0F626E455C800E643DD /* CircleButton.swift in Sources */,
 				5678236E26E0EB3500706CDE /* ShowerChatApp.swift in Sources */,
-				56EFF0F326E44D9600E643DD /* UserResponseMaker.swift in Sources */,
-				56BBD26C26E4A9B500FB8AE6 /* PlayRepo.swift in Sources */,
-				56EFF0F926E456B100E643DD /* ChatBotAnswerMaker.swift in Sources */,
+				56EFF0F326E44D9600E643DD /* UserResponseData.swift in Sources */,
+				56BBD26C26E4A9B500FB8AE6 /* SharedRepo.swift in Sources */,
+				56EFF0F926E456B100E643DD /* ChatBotAnswerData.swift in Sources */,
 				5678238C26E0EB8100706CDE /* ChatScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,9 +12,6 @@ struct ChatScreen: View {
     var player = AVPlayer(url:  Bundle.main.url(forResource: "mentalCareVideo", withExtension: "MP4")!)
     @ObservedObject var sharedVariables = SharedRepo.sharedVariables
     
-    let chatBotAnswerData = ChatBotAnswerData.all()
-    let userResponseData = UserResponseData.all()
-    
     @EnvironmentObject private var clientSocket: Connection
     @State private var isPresented = true
     
@@ -31,17 +28,17 @@ struct ChatScreen: View {
             
             VStack {
                 Spacer()
-                
+
                 VStack {
-                    if sharedVariables.usrRspBtnVisible {
-                        TestTextView(answer: sharedVariables.responses.count > 0 ? sharedVariables.responses[0] : chatBotAnswerData[sharedVariables.ansNum].answer)
+                    if sharedVariables.usrRspBtnVisible && !sharedVariables.chatbot.isEmpty {
+                        ChatBotAnswerTextView(chatBotAnswer: sharedVariables.chatbot)
                     }
 
                     HStack {
-                        if sharedVariables.usrRspBtnVisible {
-                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[1] : userResponseData[sharedVariables.btnNum1].response)
-                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[2] : userResponseData[sharedVariables.btnNum2].response)
-                            TestButton(response: sharedVariables.responses.count > 0 ? sharedVariables.responses[3] : userResponseData[sharedVariables.btnNum3].response)
+                        ForEach(sharedVariables.user_response, id:\.self ) { response in
+                            if sharedVariables.usrRspBtnVisible {
+                                UserResponseButton(userResponse: response)
+                            }
                         }
                     }
                 }

@@ -94,7 +94,15 @@ class Socket: NSObject, StreamDelegate {
     }
 
     func sendText(text: String) -> Bool {
-        self.send(data: (text).data(using: textEncoding)!)
+        let stringToServer = SendToServer(text: text)
+
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        let dataToServer = try! encoder.encode(stringToServer)
+        let jsonToServer = String(data: dataToServer, encoding: .utf8)!
+        
+        return self.send(data: (jsonToServer).data(using: textEncoding)!)
     }
     
     private func readAvailableBytes(stream: InputStream) {
@@ -110,12 +118,28 @@ class Socket: NSObject, StreamDelegate {
         if let (data, string) =
             processedMessageString(buffer: buffer, length: numberOfBytesRead) {
             
-            let serverResponse = string
-            let responseParts = serverResponse.split(separator: ":")
-            SharedRepo.sharedVariables.responses.removeAll()
-            for responsePart in responseParts {
-                SharedRepo.sharedVariables.responses.append(String(responsePart))
+            SharedRepo.sharedVariables.response_type.removeAll()
+            SharedRepo.sharedVariables.chatbot.removeAll()
+            SharedRepo.sharedVariables.user_response.removeAll()
+            
+            let decoder = JSONDecoder()
+            guard let serverResponse = try? decoder.decode(ServerResponse.self, from: string.data(using: .utf8)!) else {
+                print("JSON decoding error!")
+                return
             }
+            
+            if !serverResponse.type.isEmpty {
+                SharedRepo.sharedVariables.response_type = serverResponse.type
+            }
+            if !serverResponse.chatbot.isEmpty {
+                SharedRepo.sharedVariables.chatbot = serverResponse.chatbot
+            }
+            if !serverResponse.user_response.isEmpty {
+                for response in serverResponse.user_response {
+                    SharedRepo.sharedVariables.user_response.append(response)
+                }
+            }
+            
             
             if self.dataHandler != nil {
                 self.dataHandler!(data, self.ipAddress)
@@ -184,4 +208,14 @@ class Socket: NSObject, StreamDelegate {
             print("some other event...")
         }
     }
+}
+
+struct ServerResponse: Codable {
+    var type: String
+    var chatbot: String
+    var user_response: [String]
+}
+
+struct SendToServer: Codable {
+    var text: String
 }

@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-import DropDown
 
 struct DiaryView: View {
     @EnvironmentObject private var clientSocket: Connection
     @State private var navigation: String?
-    @State private var dropDown: DropDown!
-    @State private var dropDownSelected = false
-    @State private var dropDownTapped = false
+//    @State private var dropDown: DropDown!
+//    @State private var dropDownSelected = false
+//    @State private var dropDownTapped = false
     @State private var moodSelected = "기분 선택"
     @State private var faceSelected = "icFaceDim"
     @State var diaryContents: String = ""
@@ -59,19 +58,19 @@ struct DiaryView: View {
                 Divider()
                 Spacer()
                 Image(faceSelected)
-                HStack {
-                    if !dropDownSelected {
-                        Text(moodSelected).font(Font.custom("AppleSDGothicNeo-Medium", size: 19)).foregroundColor(.gray.opacity(0.5))
-                        dropDownTapped ? Image("icDropdownUp") : Image("icDropDown")
-                    } else if dropDownSelected {
-                        Text(moodSelected).font(Font.custom("AppleSDGothicNeo-Medium", size: 19)).foregroundColor(.yellow)
-                        dropDownTapped ? Image("icDropdownBlackUp") : Image("icDropdownBlack")
-                    }
-                }
-                .onTapGesture {
-                    dropDown.show()
-                    dropDownTapped.toggle()
-                }
+//                HStack {
+//                    if !dropDownSelected {
+//                        Text(moodSelected).font(Font.custom("AppleSDGothicNeo-Medium", size: 19)).foregroundColor(.gray.opacity(0.5))
+//                        dropDownTapped ? Image("icDropdownUp") : Image("icDropDown")
+//                    } else if dropDownSelected {
+//                        Text(moodSelected).font(Font.custom("AppleSDGothicNeo-Medium", size: 19)).foregroundColor(.yellow)
+//                        dropDownTapped ? Image("icDropdownBlackUp") : Image("icDropdownBlack")
+//                    }
+//                }
+//                .onTapGesture {
+//                    dropDown.show()
+//                    dropDownTapped.toggle()
+//                }
                 TextField("", text: $diaryContents)
                     .padding()
                     .multilineTextAlignment(.center)
@@ -83,28 +82,28 @@ struct DiaryView: View {
                 #else
                 clientSocket.connect(ip: "34.127.68.142", port: 8008)
                 #endif
-                dropDownSelected = false
-                dropDownTapped = false
-                dropDown = DropDown()
-                dropDown.dataSource = ["기분 최고 b", "좋아", "별로", "기분 별로 p"]
-                dropDown.bottomOffset = CGPoint(x: 0, y: 180)
-                dropDown.width = 155
-                dropDown.textColor = UIColor.gray
-                dropDown.textFont = UIFont.systemFont(ofSize: 18)
-                dropDown.selectedTextColor = UIColor.black
-                dropDown.cancelAction = {
-                    dropDownTapped.toggle()
-                }
-                dropDown.selectionAction = { [self] (index: Int, item: String) in
-                    moodSelected = item
-                    dropDownSelected.toggle()
-                    dropDownTapped.toggle()
-                    if moodSelected.contains("기분 최고 b") {
-                        faceSelected = "icFaceSelect"
-                    } else {
-                        faceSelected = "icFaceDim"
-                    }
-                }
+//                dropDownSelected = false
+//                dropDownTapped = false
+//                dropDown = DropDown()
+//                dropDown.dataSource = ["기분 최고 b", "좋아", "별로", "기분 별로 p"]
+//                dropDown.bottomOffset = CGPoint(x: 0, y: 180)
+//                dropDown.width = 155
+//                dropDown.textColor = UIColor.gray
+//                dropDown.textFont = UIFont.systemFont(ofSize: 18)
+//                dropDown.selectedTextColor = UIColor.black
+//                dropDown.cancelAction = {
+//                    dropDownTapped.toggle()
+//                }
+//                dropDown.selectionAction = { [self] (index: Int, item: String) in
+//                    moodSelected = item
+//                    dropDownSelected.toggle()
+//                    dropDownTapped.toggle()
+//                    if moodSelected.contains("기분 최고 b") {
+//                        faceSelected = "icFaceSelect"
+//                    } else {
+//                        faceSelected = "icFaceDim"
+//                    }
+//                }
             })
             .edgesIgnoringSafeArea(.all)
         }

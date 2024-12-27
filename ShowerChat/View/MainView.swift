@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DropDown
 
 struct MainView: View {
     @State private var missionSelected: String?

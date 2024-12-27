@@ -11,7 +11,6 @@ target 'ShowerChat' do
   end
 
   # Pods for ShowerChat
-  pod 'DropDown'
   platform :ios, '9.0'
   import_pods
 end
